@@ -8,18 +8,19 @@ public class MoveController : MonoBehaviour
    public Vector2 movement;
     public float speed = 5f ;
     public Rigidbody2D rb;
+   public  bool moving = true;
 
     private void FixedUpdate()
     {
+        if (moving = false) return; 
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
 
     }
 
     public void Moving(InputAction.CallbackContext context)
     {
-        Debug.Log("I wanna move ");
-        movement = context.action.ReadValue<Vector2>();   
-
+        movement = context.action.ReadValue<Vector2>();
+    
     }
 
 }

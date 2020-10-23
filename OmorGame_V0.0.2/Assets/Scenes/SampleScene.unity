@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: a5587ac6095795345b1343dd1e22a6bf, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 988e021f6bf6329439fc25b2a45bc30e, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -279,55 +279,55 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 3d71c1bf-11a5-4687-826b-dbb497f3e2ba
-    m_ActionName: Player/Move[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+    m_ActionId: 936872a9-5cfd-4c15-8516-66483accba4c
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 5dcfbb7f-9692-4610-bf55-a949aa00c33e
-    m_ActionName: Player/Look[/XInputControllerWindows/rightStick,/Mouse/delta]
+    m_ActionId: 2853322b-58bf-4836-afdb-c7a9d535bac3
+    m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: ac45464a-0ad2-4bca-898d-11c6ea1720b7
-    m_ActionName: Player/Fire[/XInputControllerWindows/rightTrigger,/Mouse/leftButton]
+    m_ActionId: 529b5958-4105-4642-8b8c-a146b870d0cc
+    m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 3096d0ab-3b1f-4df8-b928-a4ff9051f0f1
-    m_ActionName: UI/Navigate[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/rightStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/rightStick/right,/XInputControllerWindows/dpad,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+    m_ActionId: 154edefd-5f30-4d7e-ae18-37f3275e5515
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 3a660bb2-01ff-4851-9008-16d3fa00d0ab
-    m_ActionName: UI/Submit[/Keyboard/enter,/XInputControllerWindows/buttonSouth]
+    m_ActionId: 7c3b1bb2-1007-4b24-a67c-213b07126a06
+    m_ActionName: UI/Submit[/Keyboard/enter]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: d38290e7-cc04-49b8-b3ef-8c295b8886fa
-    m_ActionName: UI/Cancel[/Keyboard/escape,/XInputControllerWindows/buttonEast]
+    m_ActionId: ba95d94f-f0b4-45e9-a0be-f23ede936c43
+    m_ActionName: UI/Cancel[/Keyboard/escape]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: e4771ee1-be13-49eb-8ea9-ef6fa12ddb38
+    m_ActionId: de02c7d1-e02e-40e6-b212-685ee1281035
     m_ActionName: UI/Point[/Mouse/position]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: a823a7b3-b0a5-4109-bb6c-31d9f465364c
+    m_ActionId: 72acd617-3b49-4085-b523-f5b493451832
     m_ActionName: UI/Click[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 1f745b8c-3bd7-4e7a-9fe5-45cda830d0f3
+    m_ActionId: 4d94dbf3-ed60-4b02-8c7c-4932c7e4fab0
     m_ActionName: UI/ScrollWheel[/Mouse/scroll]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 8aebc1d3-b64b-4b2a-b631-16f15f4098c4
+    m_ActionId: 99411367-9a4f-42da-babd-12c2985f1254
     m_ActionName: UI/MiddleClick[/Mouse/middleButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 758d4a78-9f4f-4210-94af-fefbea53e424
+    m_ActionId: b415f12f-c8f7-4f8c-91b8-4bdee66060db
     m_ActionName: UI/RightClick[/Mouse/rightButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: ebcd12b8-213b-4690-a4d7-fe52241515c5
+    m_ActionId: 4e2b9e2e-beea-464a-b4cf-f529a6c67c76
     m_ActionName: UI/TrackedDevicePosition
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 4c911a09-c39d-49e1-b501-46b92b5fbaaa
+    m_ActionId: c4376a5e-da4c-40c6-bbf1-85ff8073d213
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 

@@ -19,6 +19,7 @@ public class MoveController : MonoBehaviour
     {
         Debug.Log("I wanna move ");
         movement = context.action.ReadValue<Vector2>();   
+
     }
 
 }

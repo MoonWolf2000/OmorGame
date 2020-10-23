@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 1260351829}
   - component: {fileID: 1260351828}
   - component: {fileID: 1260351830}
+  - component: {fileID: 1260351831}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -235,7 +236,7 @@ Transform:
   m_GameObject: {fileID: 1260351825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -282,7 +283,19 @@ MonoBehaviour:
     m_ActionId: 936872a9-5cfd-4c15-8516-66483accba4c
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1260351831}
+        m_TargetAssemblyTypeName: Shoot, Assembly-CSharp
+        m_MethodName: Shooting
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 2853322b-58bf-4836-afdb-c7a9d535bac3
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
@@ -421,3 +434,17 @@ MonoBehaviour:
   movement: {x: 0, y: 0}
   speed: 5
   rb: {fileID: 1260351828}
+--- !u!114 &1260351831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260351825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0be9e053bc1fe4788d83d707841e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pfbBullet: {fileID: 1817929037859783570, guid: c72bb78190879734f8b5a9d65fd145e5, type: 3}
+  canshoot: 1

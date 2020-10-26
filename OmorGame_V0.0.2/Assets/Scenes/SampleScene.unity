@@ -469,6 +469,7 @@ GameObject:
   - component: {fileID: 1260351830}
   - component: {fileID: 1260351831}
   - component: {fileID: 1260351832}
+  - component: {fileID: 1260351833}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -548,7 +549,19 @@ MonoBehaviour:
     m_ActionId: 2853322b-58bf-4836-afdb-c7a9d535bac3
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1260351833}
+        m_TargetAssemblyTypeName: LifeDebugger, Assembly-CSharp
+        m_MethodName: DoDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 529b5958-4105-4642-8b8c-a146b870d0cc
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
@@ -710,3 +723,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifepoints: 15
+  lifechangers: 
+--- !u!114 &1260351833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260351825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 322c827db7fbf7f4c8874bdfe90ad5d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeController: {fileID: 1260351832}

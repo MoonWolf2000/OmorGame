@@ -44,3 +44,15 @@ TagManager:
   - name: Ui
     uniqueID: 3677446563
     locked: 0
+  - name: Enemies
+    uniqueID: 602744159
+    locked: 0
+  - name: Player
+    uniqueID: 1545375731
+    locked: 0
+  - name: Ground
+    uniqueID: 1550430575
+    locked: 0
+  - name: Wall
+    uniqueID: 3812822183
+    locked: 0

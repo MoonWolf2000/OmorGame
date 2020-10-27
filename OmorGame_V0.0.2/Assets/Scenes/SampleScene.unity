@@ -545,7 +545,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
     m_ActionId: 2853322b-58bf-4836-afdb-c7a9d535bac3
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
@@ -604,6 +604,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: c4376a5e-da4c-40c6-bbf1-85ff8073d213
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1260351833}
+        m_TargetAssemblyTypeName: LifeDebugger, Assembly-CSharp
+        m_MethodName: DoHeal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6375959c-de16-43bf-a377-23259ca89d6b
+    m_ActionName: Player/Heal[/XInputControllerWindows/buttonSouth,/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -709,7 +725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pfbBullet: {fileID: 1817929037859783570, guid: c72bb78190879734f8b5a9d65fd145e5, type: 3}
-  canshoot: 1
+  canshoot: 0
 --- !u!114 &1260351832
 MonoBehaviour:
   m_ObjectHideFlags: 0

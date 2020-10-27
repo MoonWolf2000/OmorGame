@@ -4,6 +4,7 @@ public class Bullet_Fly : MonoBehaviour
 {
     public float speed = 100f;
     public Vector2 direction;
+
     public Rigidbody2D rb;
     private void Start()
     {

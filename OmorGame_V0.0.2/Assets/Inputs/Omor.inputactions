@@ -24,13 +24,21 @@
                 {
                     "name": "Fire",
                     "type": "Button",
+                    "id": "c8241eb7-f801-485d-8efc-74bee75958cb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "DebugDMG",
+                    "type": "Button",
                     "id": "529b5958-4105-4642-8b8c-a146b870d0cc",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "Heal",
+                    "name": "DebugHeal",
                     "type": "Button",
                     "id": "6375959c-de16-43bf-a377-23259ca89d6b",
                     "expectedControlType": "Button",
@@ -211,18 +219,18 @@
                     "interactions": "Press(pressPoint=0.8)",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Fire",
+                    "action": "DebugDMG",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "05f6913d-c316-48b2-a6bb-e225f14c7960",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Mouse>/middleButton",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Fire",
+                    "action": "DebugDMG",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -233,7 +241,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Touch",
-                    "action": "Fire",
+                    "action": "DebugDMG",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -244,7 +252,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "Fire",
+                    "action": "DebugDMG",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -255,7 +263,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "XR",
-                    "action": "Fire",
+                    "action": "DebugDMG",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -266,7 +274,7 @@
                     "interactions": "Press(pressPoint=0.8)",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Heal",
+                    "action": "DebugHeal",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -277,7 +285,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Heal",
+                    "action": "DebugHeal",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -288,7 +296,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Touch",
-                    "action": "Heal",
+                    "action": "DebugHeal",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -299,7 +307,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "Heal",
+                    "action": "DebugHeal",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -310,7 +318,62 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "XR",
-                    "action": "Heal",
+                    "action": "DebugHeal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b5b03621-f1fb-4238-97e9-ebf9803c9b47",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "Press(pressPoint=0.8)",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "03fee163-8e22-425c-97f7-7ce03f55febf",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "19a0b6c3-e9e1-4921-a4f9-e512aa4c8f63",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Touch",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f290a2fc-4ace-4f90-b17c-a1e0d4104dcf",
+                    "path": "<Joystick>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "453927f8-9ca1-4bb2-a9df-8bc583b9a90d",
+                    "path": "<XRController>/{PrimaryAction}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "XR",
+                    "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

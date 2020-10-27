@@ -12,7 +12,7 @@ public class LifeDebugger : MonoBehaviour
     {
         if (context.performed)
         {
-            Debug.Log("The magic lords have decided it is time to take a damage");
+           // Debug.Log("The magic lords have decided it is time to take a damage");
              lifeController.lifechangers.Add(-1);
 
         }
@@ -21,7 +21,7 @@ public class LifeDebugger : MonoBehaviour
     {
         if (context.performed)
         {
-            Debug.Log("The magic lords have decided you shall be healed");
+         //   Debug.Log("The magic lords have decided you shall be healed");
             lifeController.lifechangers.Add(+2);
 
         }

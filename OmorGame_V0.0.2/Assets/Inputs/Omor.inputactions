@@ -28,6 +28,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "SC1",
+                    "type": "Button",
+                    "id": "238dee0a-fd90-483e-be8d-b76ff37d3e49",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SC2",
+                    "type": "Button",
+                    "id": "5779b7c5-8575-4ab6-978b-f25c0a55a24a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -248,6 +264,50 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f6a3f12b-3045-473b-82e1-f90cee8bb2d8",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "Press(pressPoint=1,behavior=2)",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "SC2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c7b3cd9b-8d4a-4cd6-8a31-a2d9a20d0f9c",
+                    "path": "<Keyboard>/#(2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SC2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "124f2d58-1dc8-4076-94d7-5f66c1c98faf",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "SC1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d3cf1427-855a-4c3b-9c53-3b1532c32feb",
+                    "path": "<Keyboard>/#(1)",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SC1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

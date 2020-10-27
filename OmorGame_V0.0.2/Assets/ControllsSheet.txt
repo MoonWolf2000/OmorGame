@@ -1,0 +1,12 @@
+//Controller//
+	- D_pad
+		- Down: 	Status1
+		- Left: 	Status2
+	- Joystick Left :	Movement
+	- Joystick Right :	Shooting Direction
+
+//Keyboard & Mouse//s
+	- 1 : 		Status1
+	- 2 :		Status2
+	- WASD: 	Movement
+	- Mouse:	Shooting Direction

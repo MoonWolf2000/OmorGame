@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 1260351828}
   - component: {fileID: 1260351830}
   - component: {fileID: 1260351831}
+  - component: {fileID: 1260351832}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -342,8 +343,44 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: c4376a5e-da4c-40c6-bbf1-85ff8073d213
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1260351832}
+        m_TargetAssemblyTypeName: StatusManager, Assembly-CSharp
+        m_MethodName: StatusChanger
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 238dee0a-fd90-483e-be8d-b76ff37d3e49
+    m_ActionName: Player/StatusChanger1[/Keyboard/1]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1260351832}
+        m_TargetAssemblyTypeName: StatusManager, Assembly-CSharp
+        m_MethodName: StatusChanger
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5779b7c5-8575-4ab6-978b-f25c0a55a24a
+    m_ActionName: Player/StatusChanger2[/Keyboard/2]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0d3ef85b-bd4e-482f-83af-21123f4aace0
+    m_ActionName: Player/TEst
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 519420031}
@@ -448,3 +485,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfbBullet: {fileID: 1817929037859783570, guid: c72bb78190879734f8b5a9d65fd145e5, type: 3}
   canshoot: 1
+--- !u!114 &1260351832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260351825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa0e5fd81f810a4fb5e8d7fa0f8480a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stati:
+  - {fileID: 11400000, guid: 4f3ed4e7be540154db08bbe8d8f7b737, type: 2}
+  - {fileID: 11400000, guid: 4f74978184f566740ad67842bc718805, type: 2}
+  activeStatus: {fileID: 11400000, guid: 4f3ed4e7be540154db08bbe8d8f7b737, type: 2}

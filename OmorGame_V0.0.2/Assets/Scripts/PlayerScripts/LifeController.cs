@@ -19,5 +19,13 @@ public class LifeController : MonoBehaviour
         }
 
         lifechangers.Clear();
+
+        if( gameObject.name != "Player")
+        {
+            if(lifepoints > 1)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

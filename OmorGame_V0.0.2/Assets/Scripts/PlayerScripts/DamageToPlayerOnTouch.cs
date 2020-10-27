@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class DamageToPlayerOnTouch : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         collision.collider.gameObject.GetComponent<LifeController>().lifechangers.Add(-3);
+        Debug.Log("Test");
     }
+
+
+
+
+
 }

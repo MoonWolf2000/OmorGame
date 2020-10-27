@@ -22,7 +22,7 @@ public class LifeController : MonoBehaviour
 
         if( gameObject.name != "Player")
         {
-            if(lifepoints > 1)
+            if(lifepoints < 1)
             {
                 Destroy(gameObject);
             }

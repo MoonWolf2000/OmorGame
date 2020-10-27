@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Bullet_Fly : MonoBehaviour
 {
@@ -19,4 +17,20 @@ public class Bullet_Fly : MonoBehaviour
 
         rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<DamageToPlayerOnTouch>() == true)
+        {
+            collision.gameObject.GetComponent<LifeController>().lifechangers.Add(-1);
+            Destroy(gameObject);
+
+        }
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
+
+
 }

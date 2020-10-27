@@ -1,3 +1,4 @@
+
 {
     "name": "Omor",
     "maps": [
@@ -18,11 +19,19 @@
                     "type": "Value",
                     "id": "2853322b-58bf-4836-afdb-c7a9d535bac3",
                     "expectedControlType": "Vector2",
-                    "processors": "",
+                    "processors": "NormalizeVector2",
                     "interactions": ""
                 },
                 {
                     "name": "Fire",
+                    "type": "Button",
+                    "id": "c8241eb7-f801-485d-8efc-74bee75958cb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "DebugDMG",
                     "type": "Button",
                     "id": "529b5958-4105-4642-8b8c-a146b870d0cc",
                     "expectedControlType": "Button",
@@ -30,17 +39,9 @@
                     "interactions": ""
                 },
                 {
-                    "name": "SC1",
+                    "name": "DebugHeal",
                     "type": "Button",
-                    "id": "238dee0a-fd90-483e-be8d-b76ff37d3e49",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "SC2",
-                    "type": "Button",
-                    "id": "5779b7c5-8575-4ab6-978b-f25c0a55a24a",
+                    "id": "6375959c-de16-43bf-a377-23259ca89d6b",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -215,22 +216,22 @@
                 {
                     "name": "",
                     "id": "143bb1cd-cc10-4eca-a2f0-a3664166fe91",
-                    "path": "<Gamepad>/rightTrigger",
-                    "interactions": "",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "Press(pressPoint=0.8)",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Fire",
+                    "action": "DebugDMG",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "05f6913d-c316-48b2-a6bb-e225f14c7960",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Mouse>/middleButton",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Fire",
+                    "action": "DebugDMG",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -241,7 +242,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Touch",
-                    "action": "Fire",
+                    "action": "DebugDMG",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -252,7 +253,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "Fire",
+                    "action": "DebugDMG",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -263,51 +264,117 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "XR",
+                    "action": "DebugDMG",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1351e7ae-02ef-4f5c-ac97-bb47485fee36",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "Press(pressPoint=0.8)",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "DebugHeal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "02414237-7aea-445d-a9a4-101fcfa4e0d8",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "DebugHeal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e41cc77e-8fee-4a06-bcd5-20a6bf2c6a20",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Touch",
+                    "action": "DebugHeal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5f1d135b-104a-41b3-8b02-15cc5e97d078",
+                    "path": "<Joystick>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
+                    "action": "DebugHeal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "90baf05e-8400-4dfb-94de-6f07e4129975",
+                    "path": "<XRController>/{PrimaryAction}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "XR",
+                    "action": "DebugHeal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b5b03621-f1fb-4238-97e9-ebf9803c9b47",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "Press(pressPoint=0.8)",
+                    "processors": "",
+                    "groups": ";Gamepad",
                     "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "f6a3f12b-3045-473b-82e1-f90cee8bb2d8",
-                    "path": "<Gamepad>/dpad/left",
-                    "interactions": "Press(pressPoint=1,behavior=2)",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "SC2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c7b3cd9b-8d4a-4cd6-8a31-a2d9a20d0f9c",
-                    "path": "<Keyboard>/#(2)",
+                    "id": "03fee163-8e22-425c-97f7-7ce03f55febf",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "SC2",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "124f2d58-1dc8-4076-94d7-5f66c1c98faf",
-                    "path": "<Gamepad>/dpad/down",
-                    "interactions": "Tap",
+                    "id": "19a0b6c3-e9e1-4921-a4f9-e512aa4c8f63",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
-                    "action": "SC1",
+                    "groups": ";Touch",
+                    "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "d3cf1427-855a-4c3b-9c53-3b1532c32feb",
-                    "path": "<Keyboard>/#(1)",
-                    "interactions": "Tap",
+                    "id": "f290a2fc-4ace-4f90-b17c-a1e0d4104dcf",
+                    "path": "<Joystick>/trigger",
+                    "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "SC1",
+                    "groups": "Joystick",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "453927f8-9ca1-4bb2-a9df-8bc583b9a90d",
+                    "path": "<XRController>/{PrimaryAction}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "XR",
+                    "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -882,4 +949,5 @@
             ]
         }
     ]
+
 }

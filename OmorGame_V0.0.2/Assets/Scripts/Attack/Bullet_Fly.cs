@@ -1,40 +1,39 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
+﻿using UnityEngine;
 
 public class Bullet_Fly : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 100f;
     public Vector2 direction;
-    public Vector2 directionSign;
 
-    public Vector2 startpos;
     public Rigidbody2D rb;
-
     private void Start()
     {
+        Debug.Log("Iwann save rigifbody");
         rb = gameObject.GetComponent<Rigidbody2D>();
-        startpos = gameObject.transform.position;
-        directionSign = new Vector2(Mathf.Max(1,direction.x), Mathf.Max(1,direction.y));
-
-    }
-
-    private void ShootingDirection()
-    {
-
     }
 
 
     private void FixedUpdate()
     {
 
-        rb.MovePosition(rb.position + direction* speed * Time.fixedDeltaTime);
-       // rb.velocity = (direction * speed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<DamageToPlayerOnTouch>() == true)
+        {
+            collision.gameObject.GetComponent<LifeController>().lifechangers.Add(-1);
+            Destroy(gameObject);
+
+        }
     }
 
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
     }
+
+
 }
+

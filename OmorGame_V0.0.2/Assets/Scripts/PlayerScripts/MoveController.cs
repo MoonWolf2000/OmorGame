@@ -9,6 +9,7 @@ public class MoveController : MonoBehaviour
    public Vector2 movement;
     public float speed = 5f ;
     public Rigidbody2D rb;
+    public bool moving = true;
     public Transform t;
   public  int futureDirection = 0;
 

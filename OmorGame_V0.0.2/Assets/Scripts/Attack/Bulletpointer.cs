@@ -14,12 +14,5 @@ public class Bulletpointer : MonoBehaviour
     {
         transform.position = new Vector2(player.transform.position.x, player.transform.position.y) + positioncircle;
     }
-    public void BullutpointerPosition(InputAction.CallbackContext contex)
-    {
-        if (contex.action.ReadValue<Vector2>() == new Vector2(0, 0)) return;
-        positioncircle = contex.action.ReadValue<Vector2>();
 
-
-
-    }
 }

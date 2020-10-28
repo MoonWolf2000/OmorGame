@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class Shoot  : WeaponPotion
+public class WP_Shoot  : WeaponPotion
 {
 
     public GameObject pfbBullet;

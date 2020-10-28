@@ -536,8 +536,8 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1260351831}
-        m_TargetAssemblyTypeName: Shoot, Assembly-CSharp
+      - m_Target: {fileID: 1886229835}
+        m_TargetAssemblyTypeName: Bulletpointer, Assembly-CSharp
         m_MethodName: BullutpointerPosition
         m_Mode: 0
         m_Arguments:

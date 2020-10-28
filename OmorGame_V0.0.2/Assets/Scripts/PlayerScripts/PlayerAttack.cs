@@ -5,23 +5,35 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
-    WeaponPotion wp;
+    public GameObject pfb_WeaponPotion;
+    GameObject go_active_WeaponPotion;
+    WeaponPotion sc_active_WeaponPotion;
+
 
     private void Start()
     {
-        
+        LoadeWeapon();
     }
     private void Update()
     {
-        wp = GetComponentInChildren<WeaponPotion>();
-        wp.player = gameObject;
-        Debug.Log(wp.name);
+       
+    }
+
+    public void LoadeWeapon()
+    {
+        if (go_active_WeaponPotion != null) 
+        {
+            Destroy(go_active_WeaponPotion);
+        }
+        go_active_WeaponPotion = Instantiate(pfb_WeaponPotion, gameObject.transform);
+        sc_active_WeaponPotion = go_active_WeaponPotion.GetComponent<WeaponPotion>();
+        sc_active_WeaponPotion.player = this.gameObject;
     }
     public void Attack(InputAction.CallbackContext contex)
     {
         if (contex.performed)
         {
-            wp.Attack(contex);
+            sc_active_WeaponPotion.Attack(contex);
 
         }
 
@@ -32,7 +44,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (contex.performed)
         {
-        wp.DetermineDirection(contex);
+        sc_active_WeaponPotion.DetermineDirection(contex);
 
         }
     }

@@ -476,6 +476,10 @@ PrefabInstance:
       propertyPath: pfbbulletPointer
       value: 
       objectReference: {fileID: 6940727965410238765, guid: d49cfbb4f32aa0c4784b1e156a15d87f, type: 3}
+    - target: {fileID: 1778967526269222563, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
+      propertyPath: pfb_WeaponPotion
+      value: 
+      objectReference: {fileID: 5491673637052450766, guid: b0d41dff44001104780dd8b4e7d05e08, type: 3}
     - target: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
       propertyPath: m_Name
       value: Player

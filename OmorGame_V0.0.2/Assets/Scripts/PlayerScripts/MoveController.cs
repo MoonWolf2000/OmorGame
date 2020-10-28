@@ -38,7 +38,7 @@ public class MoveController : MonoBehaviour
         float min= 2;
         foreach(Vector2 v in directions)
         {
-            Debug.Log((input - v).magnitude);
+          
             if((input-v).magnitude <= min)
             {
                 min = (input - v).magnitude;
@@ -46,7 +46,7 @@ public class MoveController : MonoBehaviour
             }
             i++;
         }
-        Debug.Log(futureDirection);
+ 
         //Debug.LogError("StOOOP");
         switch(futureDirection)
         {

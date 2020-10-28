@@ -1,7 +1,7 @@
 
 ﻿using UnityEngine;
 
-public class Bullet_Fly : MonoBehaviour
+public class Bullet_Fly :WeaponPotion
 {
     public float speed = 100f;
     public Vector2 direction;

@@ -12,6 +12,11 @@ public class WeaponPotion : MonoBehaviour
 
     }
 
+    public virtual void DetermineDirection(InputAction.CallbackContext contex)
+    {
+
+    }
+
     public void Initalization()
     {
 

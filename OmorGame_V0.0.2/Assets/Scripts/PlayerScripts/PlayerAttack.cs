@@ -5,12 +5,31 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public WeaponPotion wp;
+    WeaponPotion wp;
+
+    private void Update()
+    {
+        wp = GetComponentInChildren<WeaponPotion>();
+        Debug.Log(wp.name);
+    }
     public void Attack(InputAction.CallbackContext contex)
     {
-        wp.Attack(contex);
+        if (contex.performed)
+        {
+            wp.Attack(contex);
+
+        }
+
+
     }
 
+    public virtual void DetermineDirection(InputAction.CallbackContext contex)
+    {
+        if (contex.performed)
+        {
+        wp.DetermineDirection(contex);
 
+        }
+    }
 
 }

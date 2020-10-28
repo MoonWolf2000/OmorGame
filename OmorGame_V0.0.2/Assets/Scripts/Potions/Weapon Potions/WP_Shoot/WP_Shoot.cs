@@ -24,7 +24,7 @@ public class WP_Shoot  : WeaponPotion
         clone.GetComponent<Bullet_Fly>().direction = bulletpointer.transform.position-gameObject.transform.position;
         canshoot = false;
     }
-    public void BullutpointerPosition(InputAction.CallbackContext contex)
+    public override void DetermineDirection(InputAction.CallbackContext contex)
     {
         if (contex.action.ReadValue<Vector2>() == new Vector2(0, 0)) return;
         bulletpointer.GetComponent<Bulletpointer>().positioncircle = contex.action.ReadValue<Vector2>();

@@ -17,6 +17,7 @@ public class MoveController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (moving == false) return;
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
 
     }

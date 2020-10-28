@@ -24,7 +24,6 @@ public class MoveController : MonoBehaviour
 
     public void Moving(InputAction.CallbackContext context)
     {
-        Debug.Log("I wanna move ");
         movement = context.action.ReadValue<Vector2>();
 
         OrientatioCheck(context.action.ReadValue<Vector2>());

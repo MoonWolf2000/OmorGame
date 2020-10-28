@@ -7,9 +7,14 @@ public class PlayerAttack : MonoBehaviour
 {
     WeaponPotion wp;
 
+    private void Start()
+    {
+        
+    }
     private void Update()
     {
         wp = GetComponentInChildren<WeaponPotion>();
+        wp.player = gameObject;
         Debug.Log(wp.name);
     }
     public void Attack(InputAction.CallbackContext contex)

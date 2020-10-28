@@ -3,15 +3,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.SceneManagement;
 
 public class WP_Shoot  : WeaponPotion
 {
 
     public GameObject pfbBullet;
-    public GameObject bulletpointer;
+    public GameObject pfbbulletPointer;
+
+    private GameObject bulletpointer;
+
     public bool canshoot = true;
 
+    private void OnEnable()
+    {
+        Initalization();
+    }
     public override void Attack(InputAction.CallbackContext contex)
     {
     
@@ -31,6 +38,15 @@ public class WP_Shoot  : WeaponPotion
 
 
 
+    }
+
+    public override void Initalization()
+    {
+        
+        bulletpointer= Instantiate(pfbbulletPointer);
+        bulletpointer.GetComponent<Bulletpointer>().player = player.transform;
+        Debug.Log("i write player");
+    
     }
 
 }

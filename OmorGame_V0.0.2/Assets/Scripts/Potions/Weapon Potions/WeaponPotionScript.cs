@@ -6,6 +6,12 @@ using UnityEngine.InputSystem;
 
 public class WeaponPotion : MonoBehaviour
 {
+    public GameObject player;
+
+    private void Start()
+    {
+      
+    }
 
     public virtual void Attack(InputAction.CallbackContext contex)
     {
@@ -17,7 +23,7 @@ public class WeaponPotion : MonoBehaviour
 
     }
 
-    public void Initalization()
+    public virtual  void Initalization()
     {
 
     }

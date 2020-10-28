@@ -7,6 +7,9 @@ using UnityEngine.InputSystem;
 public class WeaponPotion : MonoBehaviour
 {
     public GameObject player;
+    public float dmg;
+    public float distance;
+    public float time;
 
     private void Start()
     {

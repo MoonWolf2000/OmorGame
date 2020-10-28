@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,9 +14,9 @@ public class WP_Shoot : WeaponPotion
     public bool canshoot = true;
 
     private void Awake()
-
     {
         Initalization();
+        dmg = 5f;
         bulletpointerModifikator = new Vector3(1, 1, 0);
     }
 
@@ -38,6 +39,7 @@ public class WP_Shoot : WeaponPotion
         //clone.GetComponent<Bullet_Fly>().direction = contex.action.ReadValue<Vector2>();
 
         clone.GetComponent<Bullet_Fly>().direction = bulletpointer.transform.position - gameObject.transform.position;
+        clone.GetComponent<Bullet_Fly>().Bullet_dmg = Convert.ToInt32(dmg);
         canshoot = false;
     }
     public override void DetermineDirection(InputAction.CallbackContext contex)

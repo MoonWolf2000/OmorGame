@@ -6,14 +6,16 @@ using UnityEngine.InputSystem;
 
 public class MoveController : MonoBehaviour
 {
-   public Vector2 movement;
+    public Vector2 movement;
     public float speed = 5f ;
     public Rigidbody2D rb;
     public bool moving = true;
     public Transform t;
-  public  int futureDirection = 0;
+    public  int futureDirection = 0;
 
     public  Vector2[] directions = new Vector2[4];
+
+    public VectorValue startingPosition;
 
     private void FixedUpdate()
     {

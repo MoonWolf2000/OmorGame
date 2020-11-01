@@ -2,6 +2,19 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
+# =============== #
+# Unity generated #
+# =============== #
+[T]emp/
+[O]bj/
+[B]uild
+/[B]uilds/
+/[L]ibrary/
+sysinfo.txt
+*.stackdump
+/Assets/AssetStoreTools*
+*.apk
+*.unitypackage
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/

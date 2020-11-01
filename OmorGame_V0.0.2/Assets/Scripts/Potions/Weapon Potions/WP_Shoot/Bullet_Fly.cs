@@ -5,10 +5,12 @@ public class Bullet_Fly : MonoBehaviour
 {
     public float speed = 100f;
     public Vector2 direction;
+    public int Bullet_dmg;
 
     public Rigidbody2D rb;
     private void Start()
     {
+        //Bullet_dmg = 1;
         Debug.Log("Iwann save rigifbody");
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
@@ -23,7 +25,7 @@ public class Bullet_Fly : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<DamageToPlayerOnTouch>() == true)
         {
-            collision.gameObject.GetComponent<LifeController>().lifechangers.Add(-1);
+            collision.gameObject.GetComponent<LifeController>().lifechangers.Add(-Bullet_dmg);
             Destroy(gameObject);
 
         }

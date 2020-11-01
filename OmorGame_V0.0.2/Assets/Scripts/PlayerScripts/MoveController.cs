@@ -9,6 +9,7 @@ public class MoveController : MonoBehaviour
    public Vector2 movement;
     public float speed = 5f ;
     public Rigidbody2D rb;
+    public bool moving = true;
     public Transform t;
   public  int futureDirection = 0;
 
@@ -16,13 +17,13 @@ public class MoveController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (moving == false) return;
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
 
     }
 
     public void Moving(InputAction.CallbackContext context)
     {
-        Debug.Log("I wanna move ");
         movement = context.action.ReadValue<Vector2>();
 
         OrientatioCheck(context.action.ReadValue<Vector2>());
@@ -37,7 +38,7 @@ public class MoveController : MonoBehaviour
         float min= 2;
         foreach(Vector2 v in directions)
         {
-            Debug.Log((input - v).magnitude);
+          
             if((input-v).magnitude <= min)
             {
                 min = (input - v).magnitude;
@@ -45,7 +46,7 @@ public class MoveController : MonoBehaviour
             }
             i++;
         }
-        Debug.Log(futureDirection);
+ 
         //Debug.LogError("StOOOP");
         switch(futureDirection)
         {

@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1778967525857891716
 RectTransform:
   m_ObjectHideFlags: 0
@@ -201,6 +201,7 @@ GameObject:
   - component: {fileID: 1778967526269222563}
   - component: {fileID: 1778967526269222560}
   - component: {fileID: 1778967526269222561}
+  - component: {fileID: 823341396}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -506,6 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02fdd7900ee4f2845ab23fe472a8b69f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pfb_WeaponPotion: {fileID: 5491673637052450766, guid: b0d41dff44001104780dd8b4e7d05e08, type: 3}
 --- !u!114 &1778967526269222560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,3 +535,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeController: {fileID: 1778967526269222560}
+--- !u!114 &823341396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778967526269222569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22494aef95e0c304e874de0ea535f48b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

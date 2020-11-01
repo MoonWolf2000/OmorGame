@@ -305,6 +305,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &823341395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
+  m_PrefabInstance: {fileID: 1778967527190433784}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &823341396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823341395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22494aef95e0c304e874de0ea535f48b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &834135820
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +476,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1778967526269222560, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
   m_PrefabInstance: {fileID: 1778967527190433784}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 823341395}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62fa4f1f1af25744f9c8762b8b19c35c, type: 3}
@@ -483,7 +500,7 @@ PrefabInstance:
     - target: {fileID: 1778967526269222563, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
       propertyPath: pfb_WeaponPotion
       value: 
-      objectReference: {fileID: 7269630548561534157, guid: 2c68d4f93c6928a449df01b6d80c2044, type: 3}
+      objectReference: {fileID: 5491673637052450766, guid: b0d41dff44001104780dd8b4e7d05e08, type: 3}
     - target: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
       propertyPath: m_Name
       value: Player

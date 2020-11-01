@@ -14,7 +14,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Look",
+                    "name": " ",
                     "type": "Value",
                     "id": "2853322b-58bf-4836-afdb-c7a9d535bac3",
                     "expectedControlType": "Vector2",
@@ -54,7 +54,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Look",
+                    "action": " ",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -65,7 +65,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse;Touch",
-                    "action": "Look",
+                    "action": " ",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -76,7 +76,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "Look",
+                    "action": " ",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

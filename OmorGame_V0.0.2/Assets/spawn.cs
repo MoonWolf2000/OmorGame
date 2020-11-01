@@ -1,23 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour
+public class spawn : MonoBehaviour
 {
-<<<<<<< HEAD
-    public SceneAsset test;
-=======
+    private GameObject GO_Player;
+
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        GO_Player = FindObjectOfType<Player>().gameObject;
     }
->>>>>>> 9dc4d6c72fc1745cab8f3f081979baffbfa71a6a
     // Start is called before the first frame update
     void Start()
     {
-        
+        GO_Player.transform.position = gameObject.transform.position;
     }
 
     // Update is called once per frame

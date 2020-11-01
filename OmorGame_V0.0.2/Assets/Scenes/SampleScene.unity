@@ -472,6 +472,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 823341396, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
+      propertyPath: test
+      value: 
+      objectReference: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
     - target: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
       propertyPath: m_Name
       value: Player
@@ -533,6 +537,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5943467182401143675, guid: 0dd8769c9445bd148b6138be0113e2ba, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7156064098865048869, guid: 0dd8769c9445bd148b6138be0113e2ba, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -580,6 +588,10 @@ PrefabInstance:
     - target: {fileID: 7156064098865048872, guid: 0dd8769c9445bd148b6138be0113e2ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221351198850898662, guid: 0dd8769c9445bd148b6138be0113e2ba, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dd8769c9445bd148b6138be0113e2ba, type: 3}

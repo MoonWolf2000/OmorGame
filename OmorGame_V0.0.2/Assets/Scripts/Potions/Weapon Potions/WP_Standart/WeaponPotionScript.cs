@@ -11,6 +11,9 @@ public class WeaponPotion : Potion
     public float directionAttackTime;
     public float meleeAttackTime;
 
+    private GameObject pfbSword;
+    private GameObject Sword;
+
     private GameObject pfbBullet;
     private GameObject pfbbulletPointer;
     private GameObject bulletpointer;
@@ -53,9 +56,10 @@ public class WeaponPotion : Potion
         return localtime;
     }
 
-    public void DirectionalAttackTimed(InputAction.CallbackContext context
-        )
-    { 
+    public void DirectionalAttackTimed(InputAction.CallbackContext context)
+    {
+        Debug.Log(context.startTime);
+       
         if (t1 <= 0)
         { 
             DirectionelAttack(context);
@@ -82,13 +86,18 @@ public class WeaponPotion : Potion
 
     protected virtual void DirectionelAttack(InputAction.CallbackContext contex)
     {
-        DetermineDirection(contex);
-        GameObject clone;
-        clone = Instantiate(pfbBullet, gameObject.transform.position, gameObject.transform.rotation);
-        clone.GetComponent<Bullet_Fly>().direction = bulletpointerModifikator;
-        //clone.GetComponent<Bullet_Fly>().direction = bulletpointer.transform.position - gameObject.transform.position;
-        clone.GetComponent<Bullet_Fly>().Bullet_dmg = Convert.ToInt32(dmg);
-        canshoot = false;
+            Debug.Log(contex.duration);
+
+        if (contex.duration > 0.1)
+        {
+
+            GameObject clone;
+            clone = Instantiate(pfbBullet, gameObject.transform.position, gameObject.transform.rotation);
+            clone.GetComponent<Bullet_Fly>().direction = bulletpointerModifikator;
+            //clone.GetComponent<Bullet_Fly>().direction = bulletpointer.transform.position - gameObject.transform.position;
+            clone.GetComponent<Bullet_Fly>().Bullet_dmg = Convert.ToInt32(dmg);
+            canshoot = false;
+        }
     }
 
     protected virtual void DetermineDirection(InputAction.CallbackContext contex)
@@ -100,11 +109,17 @@ public class WeaponPotion : Potion
 
     protected virtual void MeleeAttack(InputAction.CallbackContext contex)
     {
-        Debug.Log(" Meelee Booom");
+
+        GameObject Sword;
+        Sword = Instantiate(pfbSword, player.transform.position, player.transform.rotation);
+       
+
     }
 
     protected virtual void Initalization()
     {
         bulletpointer = Instantiate(pfbbulletPointer);
+       
+
     }
 }

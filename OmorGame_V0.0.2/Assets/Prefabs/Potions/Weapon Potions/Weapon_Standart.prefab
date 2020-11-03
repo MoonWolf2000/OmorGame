@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5491673637052450765}
-  - component: {fileID: 5491673637052450764}
   - component: {fileID: 5491673637052450763}
   m_Layer: 0
   m_Name: Weapon_Standart
@@ -32,28 +31,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5491673637052450764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5491673637052450766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f0be9e053bc1fe4788d83d707841e4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  element: 0
-  ID: PoWeS1
-  Recipe:
-  - {fileID: 11400000, guid: 2a3f03b449e25e4419015d632fd44a00, type: 2}
-  player: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-  dmg: 5
-  distance: 1
-  directionAttackTime: 1
-  meleeAttackTime: 1
-  canshoot: 1
 --- !u!212 &5491673637052450763
 SpriteRenderer:
   m_ObjectHideFlags: 0

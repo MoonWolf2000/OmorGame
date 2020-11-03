@@ -3,10 +3,10 @@
 
 public class Bullet_Fly : MonoBehaviour
 {
-    public float speed = 100f;
+    public float speed ;
     public Vector2 direction;
     public int Bullet_dmg;
-    public float timer = 0.2f;
+    public float timer = 0.0f;
 
     public Rigidbody2D rb;
     private void Start()

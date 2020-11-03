@@ -14,9 +14,17 @@
                     "interactions": ""
                 },
                 {
-                    "name": " ",
+                    "name": "Shoot in Direction",
                     "type": "Value",
                     "id": "2853322b-58bf-4836-afdb-c7a9d535bac3",
+                    "expectedControlType": "Vector2",
+                    "processors": "NormalizeVector2",
+                    "interactions": ""
+                },
+                {
+                    "name": "DetermineDirection ",
+                    "type": "Value",
+                    "id": "559d46bb-e0c3-4885-b952-0fdc14dfe96f",
                     "expectedControlType": "Vector2",
                     "processors": "NormalizeVector2",
                     "interactions": ""
@@ -51,10 +59,10 @@
                     "name": "",
                     "id": "c1f7a91b-d0fd-4a62-997e-7fb9b69bf235",
                     "path": "<Gamepad>/rightStick",
-                    "interactions": "",
+                    "interactions": "Hold(duration=0.1,pressPoint=1)",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": " ",
+                    "action": "Shoot in Direction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -65,7 +73,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse;Touch",
-                    "action": " ",
+                    "action": "Shoot in Direction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -76,7 +84,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": " ",
+                    "action": "Shoot in Direction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -374,6 +382,39 @@
                     "processors": "",
                     "groups": "Joystick",
                     "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1276906e-ce7f-4ccd-9414-fc968e82bf34",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "NormalizeVector2",
+                    "groups": ";Gamepad",
+                    "action": "DetermineDirection ",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ed7ba545-777c-4827-aab8-3345901d513f",
+                    "path": "<Pointer>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse;Touch",
+                    "action": "DetermineDirection ",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e7bc8e46-51c6-4ce0-a992-cb5aacdd495b",
+                    "path": "<Joystick>/{Hatswitch}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
+                    "action": "DetermineDirection ",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

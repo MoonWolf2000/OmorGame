@@ -29,24 +29,14 @@ public class PlayerAttack : MonoBehaviour
         sc_active_WeaponPotion = go_active_WeaponPotion.GetComponent<WeaponPotion>();
         sc_active_WeaponPotion.player = this.gameObject;
     }
-    public void Attack(InputAction.CallbackContext contex)
+    public void MeeleAttack(InputAction.CallbackContext contex)
     {
-        if (contex.performed)
-        {
-            sc_active_WeaponPotion.DirectionelAttack(contex);
-
-        }
-
-
+        sc_active_WeaponPotion.MA1(contex);
     }
-
-    public virtual void DetermineDirection(InputAction.CallbackContext contex)
+    public void DirektionalAttack(InputAction.CallbackContext contex)
     {
-        if (contex.performed)
-        {
-        sc_active_WeaponPotion.DetermineDirection(contex);
-
-        }
+        sc_active_WeaponPotion.DD1(contex);
+        sc_active_WeaponPotion.DA1(contex);  
     }
 
 }

@@ -23,8 +23,8 @@ public class WeaponPotion : Potion
     private void Awake()
     {
 
-        pfbBullet =  AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Potions/Weapon Potions/Bullet.prefab",typeof(GameObject)) as GameObject;
-        pfbbulletPointer = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Potions/Weapon Potions/Bulletpiont.prefab", typeof(GameObject)) as GameObject;
+        pfbBullet =  AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Potions/Weapon Potions/Standart Prefabs (DoNotMove)/Bullet.prefab", typeof(GameObject)) as GameObject;
+        pfbbulletPointer = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Potions/Weapon Potions/Standart Prefabs (DoNotMove)/Bulletpiont.prefab", typeof(GameObject)) as GameObject;
         Initalization();
         bulletpointerModifikator = new Vector3(1, 1, 0);
     }
@@ -39,7 +39,21 @@ public class WeaponPotion : Potion
         bulletpointer.GetComponent<Rigidbody2D>().MovePosition(gameObject.transform.position + bulletpointerModifikator);
     }
 
-    public virtual void DirectionelAttack(InputAction.CallbackContext contex)
+    public void DA1(InputAction.CallbackContext contex)
+    {
+        DirectionelAttack(contex);
+    }    
+    public void DD1(InputAction.CallbackContext contex)
+    {
+        DetermineDirection(contex);
+    }    
+   public void MA1(InputAction.CallbackContext contex)
+    {
+       MeleeAttack(contex);
+    }
+
+
+    protected virtual void DirectionelAttack(InputAction.CallbackContext contex)
     {
         GameObject clone;
         clone = Instantiate(pfbBullet, bulletpointer.transform.position, bulletpointer.transform.rotation);
@@ -48,19 +62,19 @@ public class WeaponPotion : Potion
         canshoot = false;
     }
 
-    public virtual void DetermineDirection(InputAction.CallbackContext contex)
+    protected virtual void DetermineDirection(InputAction.CallbackContext contex)
     {
         if (contex.action.ReadValue<Vector2>() == new Vector2(0, 0)) return;
         bulletpointerModifikator = contex.action.ReadValue<Vector2>();
 
     }
 
-    public virtual void MeleeAttack(InputAction.CallbackContext contex)
+    protected virtual void MeleeAttack(InputAction.CallbackContext contex)
     {
 
     }
 
-    public virtual  void Initalization()
+    protected virtual  void Initalization()
     {
         bulletpointer = Instantiate(pfbbulletPointer);
     }

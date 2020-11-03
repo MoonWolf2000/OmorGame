@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Recipe_", menuName = "ScriptableObjects/Recipe", order =3 )]
 public class Recipe : ScriptableObject
 {
-    public Collectable[] Ingreediens{ get; set; }
+    public Collectable[] ingreediens;
 }

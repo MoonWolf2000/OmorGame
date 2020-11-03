@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5491673637052450764}
   - component: {fileID: 5491673637052450763}
   m_Layer: 0
-  m_Name: Weapon_Shoot
+  m_Name: Weapon_Standart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,9 +51,8 @@ MonoBehaviour:
   player: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
   dmg: 5
   distance: 1
-  time: 1
-  pfbBullet: {fileID: 1817929037859783570, guid: c72bb78190879734f8b5a9d65fd145e5, type: 3}
-  pfbbulletPointer: {fileID: 6940727965410238765, guid: d49cfbb4f32aa0c4784b1e156a15d87f, type: 3}
+  directionAttackTime: 1
+  meleeAttackTime: 1
   canshoot: 1
 --- !u!212 &5491673637052450763
 SpriteRenderer:

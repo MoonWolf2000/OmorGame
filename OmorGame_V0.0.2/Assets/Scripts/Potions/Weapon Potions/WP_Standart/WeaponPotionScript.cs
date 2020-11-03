@@ -91,7 +91,7 @@ public class WeaponPotion : Potion
 
     protected virtual void MeleeAttack(InputAction.CallbackContext contex)
     {
-
+        Debug.Log(" Meelee Booom");
     }
 
     protected virtual void Initalization()

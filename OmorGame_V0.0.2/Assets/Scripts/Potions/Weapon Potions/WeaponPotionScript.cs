@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class WeaponPotion : MonoBehaviour
+public class WeaponPotion : Potion
 {
     public GameObject player;
     public float dmg;

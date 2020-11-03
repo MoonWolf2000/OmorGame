@@ -16,7 +16,6 @@ public class WP_Shoot : WeaponPotion
     private void Awake()
     {
         Initalization();
-        dmg = 5f;
         bulletpointerModifikator = new Vector3(1, 1, 0);
     }
 

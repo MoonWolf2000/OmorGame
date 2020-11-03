@@ -38,46 +38,55 @@ public class WeaponPotion : Potion
     private void FixedUpdate()
     {
         bulletpointer.GetComponent<Rigidbody2D>().MovePosition(gameObject.transform.position + bulletpointerModifikator);
+        t1 = Timecheck(t1); 
+        t2 = Timecheck(t2); 
+               
     }
 
-    public void DirectionalAttackTimed(InputAction.CallbackContext contex)
+    public float Timecheck(float localtime)
     {
-        if (TimeCheck(t1, directionAttackTime))
-        {
-            DirectionelAttack(contex);
-        }
-    }
-    public void DetermineDirectionTimed(InputAction.CallbackContext contex)
-    {
-        DetermineDirection(contex);
-    }
-    public void MeleeAttackTimed(InputAction.CallbackContext contex)
-    {
-        if(TimeCheck(t2,meleeAttackTime))
-        {
-            MeleeAttack(contex);
-        }
-    }
-
-
-    private bool TimeCheck(float localtime, float worldtime)
-    {
-        localtime = localtime - Time.fixedDeltaTime;
         if (localtime <= 0)
         {
-            localtime = worldtime;
-            return true;
+            return 0;
         }
-
-        return false;
+        localtime = localtime - Time.fixedDeltaTime;
+        return localtime;
     }
+
+    public void DirectionalAttackTimed(InputAction.CallbackContext context
+        )
+    { 
+        if (t1 <= 0)
+        { 
+            DirectionelAttack(context);
+            t1 = meleeAttackTime;
+        }
+    }
+    public void DetermineDirectionTimed(InputAction.CallbackContext context)
+    {
+        DetermineDirection(context);
+    }
+    public void MeleeAttackTimed(InputAction.CallbackContext context)
+    {
+        if (t2 <= 0)
+        {
+            MeleeAttack(context);
+            t2 = meleeAttackTime;
+
+        }
+        
+    }
+
+
 
 
     protected virtual void DirectionelAttack(InputAction.CallbackContext contex)
     {
+        DetermineDirection(contex);
         GameObject clone;
-        clone = Instantiate(pfbBullet, bulletpointer.transform.position, bulletpointer.transform.rotation);
-        clone.GetComponent<Bullet_Fly>().direction = bulletpointer.transform.position - gameObject.transform.position;
+        clone = Instantiate(pfbBullet, gameObject.transform.position, gameObject.transform.rotation);
+        clone.GetComponent<Bullet_Fly>().direction = bulletpointerModifikator;
+        //clone.GetComponent<Bullet_Fly>().direction = bulletpointer.transform.position - gameObject.transform.position;
         clone.GetComponent<Bullet_Fly>().Bullet_dmg = Convert.ToInt32(dmg);
         canshoot = false;
     }

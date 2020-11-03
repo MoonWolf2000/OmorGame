@@ -35,7 +35,7 @@ public class PlayerAttack : MonoBehaviour
     }
     public void DirektionalAttack(InputAction.CallbackContext contex)
     {
-        sc_active_WeaponPotion.DetermineDirectionTimed(contex);
+       // sc_active_WeaponPotion.DetermineDirectionTimed(contex);
         sc_active_WeaponPotion.DirectionalAttackTimed(contex);  
     }
 

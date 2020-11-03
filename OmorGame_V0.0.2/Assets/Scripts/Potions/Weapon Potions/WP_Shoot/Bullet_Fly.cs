@@ -10,8 +10,6 @@ public class Bullet_Fly : MonoBehaviour
     public Rigidbody2D rb;
     private void Start()
     {
-        //Bullet_dmg = 1;
-        Debug.Log("Iwann save rigifbody");
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 

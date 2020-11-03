@@ -55,9 +55,6 @@ public class WP_Shoot : WeaponPotion
     {
 
         bulletpointer = Instantiate(pfbbulletPointer);
-       // bulletpointer.GetComponent<Bulletpointer>().player = player.transform;
-        Debug.Log("i write player");
-
     }
 
 }

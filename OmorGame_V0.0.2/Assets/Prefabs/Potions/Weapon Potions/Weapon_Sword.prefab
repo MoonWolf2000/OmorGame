@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7269630548561534156}
+  - component: {fileID: 2269977421769735117}
   - component: {fileID: 7269630548561534158}
   - component: {fileID: 7269630548561534159}
-  - component: {fileID: 2269977421769735117}
   m_Layer: 0
   m_Name: Weapon_Sword
   m_TagString: Untagged
@@ -33,6 +33,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2269977421769735117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7269630548561534157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd26f5401bbf7f441a0565a845a6643b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  element: 0
+  ID: PoWeS2
+  Recipe:
+  - {fileID: 11400000, guid: 681cad12e1cec8d4d9f049cbf2bd5a6e, type: 2}
+  player: {fileID: 0}
+  dmg: 15
+  distance: 2
+  time: 0.2
 --- !u!70 &7269630548561534158
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -100,19 +120,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2269977421769735117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7269630548561534157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd26f5401bbf7f441a0565a845a6643b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  dmg: 0
-  distance: 0
-  time: 0

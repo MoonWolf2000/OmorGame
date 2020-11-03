@@ -45,10 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   element: 0
+  ID: PoWeS1
+  Recipe:
+  - {fileID: 11400000, guid: 2a3f03b449e25e4419015d632fd44a00, type: 2}
   player: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-  dmg: 0
-  distance: 5
-  time: 0
+  dmg: 5
+  distance: 1
+  time: 1
   pfbBullet: {fileID: 1817929037859783570, guid: c72bb78190879734f8b5a9d65fd145e5, type: 3}
   pfbbulletPointer: {fileID: 6940727965410238765, guid: d49cfbb4f32aa0c4784b1e156a15d87f, type: 3}
   canshoot: 1

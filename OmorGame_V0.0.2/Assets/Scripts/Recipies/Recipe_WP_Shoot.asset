@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cbb928ba905d8d41a1d49f6ee080c6d, type: 3}
-  m_Name: Collectable_Stein
+  m_Script: {fileID: 11500000, guid: a7676f96e9c4daf429dec248ab2efdb1, type: 3}
+  m_Name: Recipe_WP_Shoot
   m_EditorClassIdentifier: 
-  ID: CS1
-  diplayName: Allmighty Stone
-  description: it does make boom when it touches you
-  value: 1
+  ingreediens:
+  - {fileID: 11400000, guid: fb4d6c287e3e9464eb137dcead1ebf1a, type: 2}

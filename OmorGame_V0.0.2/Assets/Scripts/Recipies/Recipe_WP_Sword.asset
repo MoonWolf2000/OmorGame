@@ -10,5 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7676f96e9c4daf429dec248ab2efdb1, type: 3}
-  m_Name: Recipe_Test1
+  m_Name: Recipe_WP_Sword
   m_EditorClassIdentifier: 
+  ingreediens:
+  - {fileID: 11400000, guid: fb4d6c287e3e9464eb137dcead1ebf1a, type: 2}
+  - {fileID: 11400000, guid: fb4d6c287e3e9464eb137dcead1ebf1a, type: 2}
+  - {fileID: 11400000, guid: fb4d6c287e3e9464eb137dcead1ebf1a, type: 2}

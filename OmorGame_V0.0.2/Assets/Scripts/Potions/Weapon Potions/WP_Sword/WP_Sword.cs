@@ -12,17 +12,12 @@ public class WP_Sword : WeaponPotion
     private void Awake()
     {
         attacking = false;
-        time = 90;
-        dmg = 15;
         offset = new Vector3(0, 2f, 0);
     }
 
     private void Update()
-    {if (time > 0)
-        {
-        time--;
+    {
 
-        }
     }
 
     private void FixedUpdate()
@@ -30,17 +25,13 @@ public class WP_Sword : WeaponPotion
       
     }
 
-    public override void Attack(InputAction.CallbackContext contex)
+    public override void DirectionelAttack(InputAction.CallbackContext contex)
     {
         if (attacking) return;
-        time = 90;
-
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-      //  if (!attacking) return;
         if (collision.gameObject.GetComponent<DamageToPlayerOnTouch>() == true)
         {
             collision.gameObject.GetComponent<LifeController>().lifechangers.Add(-Convert.ToInt32( dmg));

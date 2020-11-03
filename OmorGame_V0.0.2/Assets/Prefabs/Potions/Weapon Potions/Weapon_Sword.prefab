@@ -49,10 +49,13 @@ MonoBehaviour:
   ID: PoWeS2
   Recipe:
   - {fileID: 11400000, guid: 681cad12e1cec8d4d9f049cbf2bd5a6e, type: 2}
-  player: {fileID: 0}
+  player: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
   dmg: 15
   distance: 2
   time: 0.2
+  pfbBullet: {fileID: 1817929037859783570, guid: c72bb78190879734f8b5a9d65fd145e5, type: 3}
+  pfbbulletPointer: {fileID: 6940727965410238765, guid: d49cfbb4f32aa0c4784b1e156a15d87f, type: 3}
+  canshoot: 1
 --- !u!70 &7269630548561534158
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -33,7 +33,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (contex.performed)
         {
-            sc_active_WeaponPotion.Attack(contex);
+            sc_active_WeaponPotion.DirectionelAttack(contex);
 
         }
 

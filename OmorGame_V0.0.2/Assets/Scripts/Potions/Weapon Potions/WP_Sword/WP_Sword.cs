@@ -25,7 +25,7 @@ public class WP_Sword : WeaponPotion
       
     }
 
-    public override void DirectionelAttack(InputAction.CallbackContext contex)
+    protected override void DirectionelAttack(InputAction.CallbackContext contex)
     {
         if (attacking) return;
     }

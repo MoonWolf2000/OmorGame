@@ -31,12 +31,12 @@ public class PlayerAttack : MonoBehaviour
     }
     public void MeeleAttack(InputAction.CallbackContext contex)
     {
-        sc_active_WeaponPotion.MA1(contex);
+        sc_active_WeaponPotion.MeleeAttackTimed(contex);
     }
     public void DirektionalAttack(InputAction.CallbackContext contex)
     {
-        sc_active_WeaponPotion.DD1(contex);
-        sc_active_WeaponPotion.DA1(contex);  
+        sc_active_WeaponPotion.DetermineDirectionTimed(contex);
+        sc_active_WeaponPotion.DirectionalAttackTimed(contex);  
     }
 
 }

@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
-using UnityEngine.InputSystem;
+﻿using System;
 using UnityEditor;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class WeaponPotion : Potion
 {
@@ -13,17 +11,20 @@ public class WeaponPotion : Potion
     public float directionAttackTime;
     public float meleeAttackTime;
 
-    private  GameObject pfbBullet;
+    private GameObject pfbBullet;
     private GameObject pfbbulletPointer;
     private GameObject bulletpointer;
     private Vector3 bulletpointerModifikator;
+    private float t1 =0;
+    private float t2 =0;
+
 
     public bool canshoot = true;
 
     private void Awake()
     {
 
-        pfbBullet =  AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Potions/Weapon Potions/Standart Prefabs (DoNotMove)/Bullet.prefab", typeof(GameObject)) as GameObject;
+        pfbBullet = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Potions/Weapon Potions/Standart Prefabs (DoNotMove)/Bullet.prefab", typeof(GameObject)) as GameObject;
         pfbbulletPointer = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Potions/Weapon Potions/Standart Prefabs (DoNotMove)/Bulletpiont.prefab", typeof(GameObject)) as GameObject;
         Initalization();
         bulletpointerModifikator = new Vector3(1, 1, 0);
@@ -31,7 +32,7 @@ public class WeaponPotion : Potion
 
     private void Start()
     {
-      
+
     }
 
     private void FixedUpdate()
@@ -39,17 +40,36 @@ public class WeaponPotion : Potion
         bulletpointer.GetComponent<Rigidbody2D>().MovePosition(gameObject.transform.position + bulletpointerModifikator);
     }
 
-    public void DA1(InputAction.CallbackContext contex)
+    public void DirectionalAttackTimed(InputAction.CallbackContext contex)
     {
-        DirectionelAttack(contex);
-    }    
-    public void DD1(InputAction.CallbackContext contex)
+        if (TimeCheck(t1, directionAttackTime))
+        {
+            DirectionelAttack(contex);
+        }
+    }
+    public void DetermineDirectionTimed(InputAction.CallbackContext contex)
     {
         DetermineDirection(contex);
-    }    
-   public void MA1(InputAction.CallbackContext contex)
+    }
+    public void MeleeAttackTimed(InputAction.CallbackContext contex)
     {
-       MeleeAttack(contex);
+        if(TimeCheck(t2,meleeAttackTime))
+        {
+            MeleeAttack(contex);
+        }
+    }
+
+
+    private bool TimeCheck(float localtime, float worldtime)
+    {
+        localtime = localtime - Time.fixedDeltaTime;
+        if (localtime <= 0)
+        {
+            localtime = worldtime;
+            return true;
+        }
+
+        return false;
     }
 
 
@@ -74,7 +94,7 @@ public class WeaponPotion : Potion
 
     }
 
-    protected virtual  void Initalization()
+    protected virtual void Initalization()
     {
         bulletpointer = Instantiate(pfbbulletPointer);
     }

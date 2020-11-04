@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class LifeController : MonoBehaviour
 {
-    public int lifepoints = 15;
-    public List<int> lifechangers = new List<int>();
+    public float lifepoints = 15;
+    public List<float> lifechangers = new List<float>();
     // Update is called once per frame
     void FixedUpdate()
     {
        
 
         if (lifechangers.Count == 0) return;
-        foreach(int i in lifechangers)
+        foreach(float i in lifechangers)
         {
             lifepoints = lifepoints + i;
 

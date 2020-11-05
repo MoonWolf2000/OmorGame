@@ -20,7 +20,6 @@ public class I_P_A_Melee : I_P_Attack
         if (collision.gameObject.GetComponent<DamageToPlayerOnTouch>() == true)
         {
             enemie.Add(collision.gameObject);
-            collision.gameObject.GetComponent<LifeController>().lifechangers.Add(-dmg);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

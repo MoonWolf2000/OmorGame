@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class I_P_W_Attack : MonoBehaviour
+public abstract class I_P_W_Attack : MonoBehaviour
 {
     public string displayName;
 
@@ -12,20 +12,37 @@ public class I_P_W_Attack : MonoBehaviour
     public Vector3 weaponPosition;
 
 
-    public virtual void Action()
+     
+    private float t1;
+    public void Attack()
     {
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.GetComponent<DamageToPlayerOnTouch>() == true)
+        if (t1 <= 0)
         {
-            collision.gameObject.GetComponent<LifeController>().lifechangers.Add(-dmg);
-            Destroy(gameObject);
-
+            t1 = time;
+            Action();
         }
     }
 
+    protected virtual void Action()
+    {
+
+    }
+
+    private void FixedUpdate()
+    {
+        t1 = Timecheck(t1); 
+    }
+
+    private float Timecheck(float localtime)
+    {
+        if (localtime <= 0)
+        {
+            return 0;
+        }
+        localtime = localtime - Time.fixedDeltaTime;
+        return localtime;
+    }
+
+   
 
 }

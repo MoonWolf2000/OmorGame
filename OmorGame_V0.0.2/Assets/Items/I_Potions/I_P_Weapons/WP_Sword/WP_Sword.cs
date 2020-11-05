@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class WP_Sword : WeaponPotion
+public class WP_Sword : I_P_W_Standart
 {
     bool attacking;
     Vector3 offset;

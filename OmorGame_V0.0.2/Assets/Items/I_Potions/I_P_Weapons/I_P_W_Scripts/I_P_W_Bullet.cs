@@ -1,12 +1,12 @@
 
 ﻿using UnityEngine;
 
-public class Bullet_Fly : MonoBehaviour
+public class I_P_W_Bullet : MonoBehaviour
 {
     public float speed ;
     public Vector2 direction;
-    public int Bullet_dmg;
     public float timer = 0.0f;
+    public float dmg;
 
     public Rigidbody2D rb;
     private void Start()
@@ -29,7 +29,7 @@ public class Bullet_Fly : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<DamageToPlayerOnTouch>() == true)
         {
-            collision.gameObject.GetComponent<LifeController>().lifechangers.Add(-Bullet_dmg);
+            collision.gameObject.GetComponent<LifeController>().lifechangers.Add(-dmg);
             Destroy(gameObject);
 
         }

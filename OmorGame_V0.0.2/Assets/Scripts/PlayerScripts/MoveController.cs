@@ -6,12 +6,12 @@ using UnityEngine.InputSystem;
 
 public class MoveController : MonoBehaviour
 {
-   public Vector2 movement;
+    public Vector2 movement;
     public float speed = 5f ;
     public Rigidbody2D rb;
     public bool moving = true;
     public Transform t;
-  public  int futureDirection = 0;
+    public  int futureDirection = 0;
 
     public  Vector2[] directions = new Vector2[4];
 
@@ -50,7 +50,6 @@ public class MoveController : MonoBehaviour
         switch(futureDirection)
         {
             case 0:
-          
                 t.rotation = Quaternion.Euler(0f, 0f, 0f);
                 break;
             case 1:

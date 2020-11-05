@@ -5,6 +5,7 @@ using UnityEngine;
 public class LifeController : MonoBehaviour
 {
     public float lifepoints = 15;
+    public bool damageable = true;
     public List<float> lifechangers = new List<float>();
     // Update is called once per frame
     void FixedUpdate()
@@ -14,6 +15,10 @@ public class LifeController : MonoBehaviour
         if (lifechangers.Count == 0) return;
         foreach(float i in lifechangers)
         {
+            if (!damageable && i>0)
+            {
+                continue;
+            }
             lifepoints = lifepoints + i;
 
         }

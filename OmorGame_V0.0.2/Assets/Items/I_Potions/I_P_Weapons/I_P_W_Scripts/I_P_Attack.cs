@@ -14,7 +14,8 @@ public abstract class I_P_Attack : MonoBehaviour
 
 
      
-    private float t1;
+//private float t1;
+public float t1;
     public void Attack()
     {
         if (t1 <= 0)
@@ -29,7 +30,7 @@ public abstract class I_P_Attack : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         t1 = Timecheck(t1);        
     }

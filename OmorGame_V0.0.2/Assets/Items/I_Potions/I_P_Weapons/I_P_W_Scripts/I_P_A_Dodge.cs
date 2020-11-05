@@ -1,38 +1,42 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class I_P_A_Dodge : I_P_Attack
 {
-    private  MoveController playerMoveController;
+    public float duration;
+
+    private MoveController playerMoveController;
     private GameObject player;
     private Rigidbody2D playerRigidbody2D;
     private bool isDodging;
-    public float speed;
-    private Vector3 startposition;
-
+    private float speed;
+    private Vector2 startposition;
+    private Vector2 direction;
+    private float d;
     private void Awake()
     {
         player = FindObjectOfType<Player>().gameObject;
-        playerMoveController =player.GetComponent<MoveController>();
+        playerMoveController = player.GetComponent<MoveController>();
         playerRigidbody2D = player.GetComponent<Rigidbody2D>();
     }
 
     protected override void Action()
     {
         playerMoveController.moving = false;
-        startposition = player.transform.position;
+        direction = playerMoveController.directions[playerMoveController.futureDirection];
+        d = duration;
+        speed =  range/duration;
         isDodging = true;
     }
 
-    private void FixedUpdate()
+
+    protected override void FixedUpdate()
     {
+        base.FixedUpdate();
         if (!isDodging) return;
- 
-        playerRigidbody2D.MovePosition(playerRigidbody2D.position + Vector2.up * speed * Time.fixedDeltaTime);
-        if (player.transform.position == startposition + Vector3.forward*range)
+        d = d - Time.fixedDeltaTime;
+        playerRigidbody2D.MovePosition(playerRigidbody2D.position + direction * speed * Time.fixedDeltaTime);
+        if (d <= 0)
         {
-            Debug.Log(" i dodged");
             isDodging = false;
             playerMoveController.moving = true;
         }

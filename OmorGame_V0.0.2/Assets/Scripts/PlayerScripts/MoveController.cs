@@ -46,8 +46,7 @@ public class MoveController : MonoBehaviour
             }
             i++;
         }
- 
-        //Debug.LogError("StOOOP");
+
         switch(futureDirection)
         {
             case 0:

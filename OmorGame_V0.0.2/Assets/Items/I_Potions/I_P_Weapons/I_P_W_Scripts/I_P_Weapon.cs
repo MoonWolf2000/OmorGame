@@ -28,6 +28,11 @@ public class I_P_Weapon : Potion
         Initalization();
     }
 
+    private void Start()
+    {
+        Initalization();
+    }
+
 
 
     public void DirectionalAttackTimed(InputAction.CallbackContext context)
@@ -56,7 +61,7 @@ public class I_P_Weapon : Potion
 
     private GameObject PrefabCheck(GameObject prefab)
     {
-        if(prefab.gameObject != gameObject)
+        if(prefab != gameObject)
         {
             return Instantiate(prefab, transform);
         }

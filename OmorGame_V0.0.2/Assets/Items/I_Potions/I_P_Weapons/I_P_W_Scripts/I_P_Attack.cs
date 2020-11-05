@@ -13,10 +13,9 @@ public abstract class I_P_Attack : MonoBehaviour
 
 
      
-    public float t1;
+    private float t1;
     public void Attack()
     {
-        Debug.Log(t1);
         if (t1 <= 0)
         {
             t1 = time;

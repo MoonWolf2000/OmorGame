@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3362979587541450339}
   - component: {fileID: 5586741612938127823}
   - component: {fileID: -4469453182998116735}
-  - component: {fileID: 1541227304916649634}
+  - component: {fileID: 4962617595560458711}
   m_Layer: 0
-  m_Name: I_P_A_M_Standart
+  m_Name: PFB_MeeleStandart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,7 +110,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1541227304916649634
+--- !u!114 &4962617595560458711
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,13 +119,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4683585313375719443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfbb5c7021daafa4483425e351a0e055, type: 3}
+  m_Script: {fileID: 11500000, guid: a6ddd12e37e4ccb40a0819751e17ed22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayName: Kablonsky
-  time: 4
-  dmg: 80
+  displayName: HackSwordpow
+  time: 1
+  dmg: 10
   range: 1
-  weaponPosition: {x: 0, y: 1, z: 0}
-  t1: 1
+  weaponPosition: {x: 0, y: 0, z: 0}
   enemie: []

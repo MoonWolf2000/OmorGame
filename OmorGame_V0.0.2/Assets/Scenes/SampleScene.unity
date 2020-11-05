@@ -454,17 +454,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ThisTextField: {fileID: 834135822}
   lifecontroller: {fileID: 1260351832}
---- !u!114 &990716682 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1778967526269222563, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-  m_PrefabInstance: {fileID: 1778967527190433784}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02fdd7900ee4f2845ab23fe472a8b69f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1260351832 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1778967526269222560, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
@@ -532,49 +521,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[16].m_ActionId
-      value: 3674fcee-b5d0-4a47-87e7-6e0bd54f9bc8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[16].m_ActionName
-      value: Player/Dodge[/Mouse/leftButton]
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 990716682}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerAttack, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DodgeAttack
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
 --- !u!1001 &7156064099559575681
@@ -584,10 +533,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5943467182401143675, guid: 0dd8769c9445bd148b6138be0113e2ba, type: 3}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7156064098865048869, guid: 0dd8769c9445bd148b6138be0113e2ba, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -635,10 +580,6 @@ PrefabInstance:
     - target: {fileID: 7156064098865048872, guid: 0dd8769c9445bd148b6138be0113e2ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7221351198850898662, guid: 0dd8769c9445bd148b6138be0113e2ba, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dd8769c9445bd148b6138be0113e2ba, type: 3}

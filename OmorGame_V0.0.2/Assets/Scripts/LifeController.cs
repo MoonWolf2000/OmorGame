@@ -20,9 +20,6 @@ public class LifeController : MonoBehaviour
                 break;
             }
             lifepoints = lifepoints + i;
-            Debug.Log("I did damage");
-            Debug.Log(damageable);
-
         }
 
         lifechangers.Clear();

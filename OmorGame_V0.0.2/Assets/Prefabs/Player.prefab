@@ -385,6 +385,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 559d46bb-e0c3-4885-b952-0fdc14dfe96f
     m_ActionName: Player/DetermineDirection [/XInputControllerWindows/rightStick,/Mouse/delta,/Pen/delta]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1778967526269222563}
+        m_TargetAssemblyTypeName: PlayerAttack, Assembly-CSharp
+        m_MethodName: DodgeAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3674fcee-b5d0-4a47-87e7-6e0bd54f9bc8
+    m_ActionName: Player/Dodge[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
@@ -537,6 +553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifepoints: 15
+  damageable: 1
   lifechangers: []
 --- !u!114 &1778967526269222561
 MonoBehaviour:

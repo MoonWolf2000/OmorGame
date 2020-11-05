@@ -38,6 +38,14 @@
                     "interactions": "Press(pressPoint=1)"
                 },
                 {
+                    "name": "Dodge",
+                    "type": "Value",
+                    "id": "3674fcee-b5d0-4a47-87e7-6e0bd54f9bc8",
+                    "expectedControlType": "Button",
+                    "processors": "Normalize(min=1,max=1)",
+                    "interactions": "Press(pressPoint=1)"
+                },
+                {
                     "name": "DebugDMG",
                     "type": "Button",
                     "id": "529b5958-4105-4642-8b8c-a146b870d0cc",
@@ -415,6 +423,61 @@
                     "processors": "",
                     "groups": "Joystick",
                     "action": "DetermineDirection ",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "03597a63-9c47-44c0-b7ed-0f5d31370929",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Dodge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c26d4ad6-5bec-44ba-8b56-cb5b86760d8d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Dodge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ee6079f2-b696-4698-912b-5910a294fc4f",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Touch",
+                    "action": "Dodge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "47f271bb-ab9a-4730-8ce1-aa9cf9ccfcd0",
+                    "path": "<Joystick>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
+                    "action": "Dodge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c4c9b639-f2e0-4220-8776-8d4d66b3b123",
+                    "path": "<XRController>/{PrimaryAction}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "XR",
+                    "action": "Dodge",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

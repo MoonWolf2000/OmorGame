@@ -122,7 +122,6 @@ MonoBehaviour:
   dmg: 5
   range: 2
   weaponPosition: {x: 0, y: 0, z: 0}
-  t1: 0
   direction: {x: 0, y: 0, z: 0}
   speed: 5
   prefabBullet: {fileID: 1817929037859783570, guid: c72bb78190879734f8b5a9d65fd145e5, type: 3}
@@ -139,8 +138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayName: 'Wooom '
-  time: 1
+  time: 10
   dmg: 0
-  range: 0
+  range: 10
   weaponPosition: {x: 0, y: 0, z: 0}
-  t1: 0
+  speed: 2

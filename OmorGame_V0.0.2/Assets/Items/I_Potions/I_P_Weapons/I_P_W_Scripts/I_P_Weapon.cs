@@ -1,6 +1,4 @@
-﻿using System;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class I_P_Weapon : Potion
@@ -11,10 +9,10 @@ public class I_P_Weapon : Potion
     public GameObject prefabMeelelAttack;
     public GameObject prefabDodgeAttack;
 
-    private GameObject gameObjectDA; 
-    private GameObject gameObjectMA; 
+    private GameObject gameObjectDA;
+    private GameObject gameObjectMA;
     private GameObject gameObjectDoA;
-    
+
     private I_P_A_Directional directionalAttack;
     private I_P_A_Melee meelelAttack;
     private I_P_A_Dodge dodgeAttack;
@@ -38,7 +36,7 @@ public class I_P_Weapon : Potion
     public void DirectionalAttackTimed(InputAction.CallbackContext context)
     {
         if (context.performed)
-        directionalAttack.Attack();
+            directionalAttack.Attack();
     }
     public void DetermineDirectionTimed(InputAction.CallbackContext context)
     {
@@ -48,20 +46,19 @@ public class I_P_Weapon : Potion
     public void MeleeAttackTimed(InputAction.CallbackContext context)
     {
         if (context.performed)
-        meelelAttack.Attack();
+            meelelAttack.Attack();
     }
-
-    //public void DodgeAttack(InputAction.CallbackContext context)
-    //{
-    //    if (context.performed)
-    //        dodgeAttack.Attack();
-    //}
+    public void DodgeAttack(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            dodgeAttack.Attack();
+    }
 
 
 
     private GameObject PrefabCheck(GameObject prefab)
     {
-        if(prefab != gameObject)
+        if (prefab != gameObject)
         {
             return Instantiate(prefab, transform);
         }
@@ -74,11 +71,11 @@ public class I_P_Weapon : Potion
 
     private void Initalization()
     {
-       gameObjectDA =  PrefabCheck(prefabDirectionalAttack) ;
-       gameObjectMA = PrefabCheck(prefabMeelelAttack);
-       gameObjectDoA = PrefabCheck(prefabDodgeAttack);
-       directionalAttack = gameObjectDA.GetComponent<I_P_A_Directional>();
-       meelelAttack = gameObjectMA.GetComponent<I_P_A_Melee>();
+        gameObjectDA = PrefabCheck(prefabDirectionalAttack);
+        gameObjectMA = PrefabCheck(prefabMeelelAttack);
+        gameObjectDoA = PrefabCheck(prefabDodgeAttack);
+        directionalAttack = gameObjectDA.GetComponent<I_P_A_Directional>();
+        meelelAttack = gameObjectMA.GetComponent<I_P_A_Melee>();
         dodgeAttack = gameObjectDoA.GetComponent<I_P_A_Dodge>();
     }
 }

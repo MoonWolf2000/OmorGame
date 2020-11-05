@@ -39,6 +39,10 @@ public class PlayerAttack : MonoBehaviour
     public void DetermineDirection(InputAction.CallbackContext context)
     {
         sc_active_WeaponPotion.DetermineDirectionTimed(context);
+    }  
+    public void DodgeAttack(InputAction.CallbackContext context)
+    {
+        sc_active_WeaponPotion.DodgeAttack(context);
     }
 
 }

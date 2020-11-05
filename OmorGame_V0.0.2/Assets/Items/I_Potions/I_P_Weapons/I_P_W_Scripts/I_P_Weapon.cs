@@ -10,43 +10,25 @@ public class I_P_Weapon : Potion
     public GameObject prefabDirectionalAttack;
     public GameObject prefabMeelelAttack;
     public GameObject prefabDodgeAttack;
+
+    private GameObject gameObjectDA; 
+    private GameObject gameObjectMA; 
+    private GameObject gameObjectDoA;
+    
     private I_P_A_Directional directionalAttack;
     private I_P_A_Melee meelelAttack;
-  //  private I_P_W_A_Dodge dodgeAttack;
+    private I_P_A_Dodge dodgeAttack;
 
 
 
     public bool canshoot = true;
 
-    private void Awake()
+    protected virtual void Awake()
     {
-        directionalAttack = prefabDirectionalAttack.GetComponent<I_P_A_Directional>();
-        meelelAttack = prefabMeelelAttack.GetComponent<I_P_A_Melee>();
-       // dodgeAttack = prefabDodgeAttack.GetComponent<I_P_W_A_Dodge>();
-
-    
+        Initalization();
     }
 
-    private void Start()
-    {
-      //  Instantiate(prefabMeelelAttack, this.gameObject.transform.position, this.gameObject.transform.rotation);
-    }
 
-    private void FixedUpdate()
-    {
-
-               
-    }
-
-    public float Timecheck(float localtime)
-    {
-        if (localtime <= 0)
-        {
-            return 0;
-        }
-        localtime = localtime - Time.fixedDeltaTime;
-        return localtime;
-    }
 
     public void DirectionalAttackTimed(InputAction.CallbackContext context)
     {
@@ -72,8 +54,26 @@ public class I_P_Weapon : Potion
 
 
 
-    protected virtual void Initalization()
+    private GameObject PrefabCheck(GameObject prefab)
     {
+        if(prefab.gameObject != gameObject)
+        {
+            return Instantiate(prefab, transform);
+        }
+        else
+        {
+            return gameObject;
+        }
 
+    }
+
+    private void Initalization()
+    {
+       gameObjectDA =  PrefabCheck(prefabDirectionalAttack) ;
+       gameObjectMA = PrefabCheck(prefabMeelelAttack);
+       gameObjectDoA = PrefabCheck(prefabDodgeAttack);
+       directionalAttack = gameObjectDA.GetComponent<I_P_A_Directional>();
+       meelelAttack = gameObjectMA.GetComponent<I_P_A_Melee>();
+        dodgeAttack = gameObjectDoA.GetComponent<I_P_A_Dodge>();
     }
 }

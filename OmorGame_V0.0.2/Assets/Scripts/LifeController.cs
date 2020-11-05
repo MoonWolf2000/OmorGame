@@ -15,11 +15,13 @@ public class LifeController : MonoBehaviour
         if (lifechangers.Count == 0) return;
         foreach(float i in lifechangers)
         {
-            if (!damageable && i>0)
+            if (!damageable)
             {
-                continue;
+                break;
             }
             lifepoints = lifepoints + i;
+            Debug.Log("I did damage");
+            Debug.Log(damageable);
 
         }
 

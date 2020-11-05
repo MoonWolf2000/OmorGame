@@ -6,7 +6,7 @@ public class I_P_W_Bullet : MonoBehaviour
     public float speed ;
     public Vector2 direction;
     public float timer = 0.0f;
-    public float dmg;
+    public float dmg =1;
 
     public Rigidbody2D rb;
     private void Start()

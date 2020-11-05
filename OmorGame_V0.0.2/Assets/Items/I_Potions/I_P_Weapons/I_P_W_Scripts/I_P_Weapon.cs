@@ -10,9 +10,9 @@ public class I_P_Weapon : Potion
     public GameObject prefabDirectionalAttack;
     public GameObject prefabMeelelAttack;
     public GameObject prefabDodgeAttack;
-    private I_P_W_A_Directional directionalAttack;
-    private I_P_W_A_Melee meelelAttack;
-    private I_P_W_A_Dodge dodgeAttack;
+    private I_P_A_Directional directionalAttack;
+    private I_P_A_Melee meelelAttack;
+  //  private I_P_W_A_Dodge dodgeAttack;
 
 
 
@@ -20,16 +20,16 @@ public class I_P_Weapon : Potion
 
     private void Awake()
     {
-        directionalAttack = prefabDirectionalAttack.GetComponent<I_P_W_A_Directional>();
-        meelelAttack = prefabMeelelAttack.GetComponent<I_P_W_A_Melee>();
-        dodgeAttack = prefabDodgeAttack.GetComponent<I_P_W_A_Dodge>();
+        directionalAttack = prefabDirectionalAttack.GetComponent<I_P_A_Directional>();
+        meelelAttack = prefabMeelelAttack.GetComponent<I_P_A_Melee>();
+       // dodgeAttack = prefabDodgeAttack.GetComponent<I_P_W_A_Dodge>();
 
     
     }
 
     private void Start()
     {
-
+      //  Instantiate(prefabMeelelAttack, this.gameObject.transform.position, this.gameObject.transform.rotation);
     }
 
     private void FixedUpdate()
@@ -61,14 +61,14 @@ public class I_P_Weapon : Potion
     public void MeleeAttackTimed(InputAction.CallbackContext context)
     {
         if (context.performed)
-            meelelAttack.Attack();
+        meelelAttack.Attack();
     }
 
-    public void DodgeAttack(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-            dodgeAttack.Attack();
-    }
+    //public void DodgeAttack(InputAction.CallbackContext context)
+    //{
+    //    if (context.performed)
+    //        dodgeAttack.Attack();
+    //}
 
 
 

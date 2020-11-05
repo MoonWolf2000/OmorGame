@@ -454,17 +454,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ThisTextField: {fileID: 834135822}
   lifecontroller: {fileID: 1260351832}
---- !u!114 &983086137 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1778967526269222563, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-  m_PrefabInstance: {fileID: 1778967527190433784}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02fdd7900ee4f2845ab23fe472a8b69f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1260351832 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1778967526269222560, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
@@ -483,10 +472,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 823341396, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: test
-      value: 
-      objectReference: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
     - target: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
       propertyPath: m_Name
       value: Player
@@ -536,65 +521,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 983086137}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DirektionalAttack
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 983086137}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MeeleAttack
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_ActionId
-      value: 559d46bb-e0c3-4885-b952-0fdc14dfe96f
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_ActionName
-      value: Player/DetermineDirection [/XInputControllerWindows/rightStick,/Mouse/delta,/Pen/delta]
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 983086137}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerAttack, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DetermineDirection
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
 --- !u!1001 &7156064099559575681

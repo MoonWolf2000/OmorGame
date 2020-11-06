@@ -5,7 +5,6 @@ using UnityEngine;
 public class I_P_A_Directional : I_P_Attack
 {
     public Vector3 direction;
-    public float speed;
     public GameObject prefabBullet;
 
     protected override void Action()

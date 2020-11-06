@@ -14,7 +14,7 @@ public class StatusManager : MonoBehaviour
     {
         
         mc = gameObject.GetComponent<MoveController>();
-        mc.speed = activeStatus.speeeeeeed;
+        //mc.speed = activeStatus.speeeeeeed;
         ValuesChanger();
 
     }
@@ -43,7 +43,7 @@ public class StatusManager : MonoBehaviour
 
     public void ValuesChanger()
     {
-        mc.speed = activeStatus.speeeeeeed;
+      //  mc.speed = activeStatus.speeeeeeed;
         gameObject.GetComponent<SpriteRenderer>().color = activeStatus.color;
         
     }

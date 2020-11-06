@@ -6,11 +6,22 @@ public sealed class BombiDodge :I_P_A_Dodge
 {
     public GameObject prefabBomb;
     private GameObject clone;
+    private bool didDodge = false;
 
+    protected override void Action()
+    {
+        base.Action();
+        didDodge = true;
+    }
     protected override void FixedUpdate()
     {
+
+        if (didDodge)
+        {
         clone = Instantiate(prefabBomb, gameObject.transform.position, gameObject.transform.rotation);
-        clone.GetComponent<Bomb>().Explode();
+        didDodge = false;
+            Debug.Log("i create boom yeheaaa");
+        }
         base.FixedUpdate();
 
     }

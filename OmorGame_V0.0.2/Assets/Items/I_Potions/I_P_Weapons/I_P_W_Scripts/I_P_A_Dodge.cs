@@ -33,7 +33,6 @@ public class I_P_A_Dodge : I_P_Attack
         direction = playerMoveController.directions[playerMoveController.futureDirection];
         playerLifeController.damageable = false;
         d = duration;
-        speed =  range/duration;
         isDodging = true;
     }
 

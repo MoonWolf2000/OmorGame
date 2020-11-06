@@ -7,7 +7,7 @@ public class I_P_A_Directional : I_P_Attack
     public Vector3 direction;
     public float speed;
     public GameObject prefabBullet;
-    public    GameObject clone;
+    protected    GameObject clone;
 
     protected override void Action()
     {

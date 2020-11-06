@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5491673637052450765}
   - component: {fileID: 5491673637052450763}
   - component: {fileID: -2905710401422253614}
-  - component: {fileID: -5258287916404729086}
   - component: {fileID: -7313673569692723556}
   m_Layer: 0
   m_Name: PFB_WeaponExplosiveMode
@@ -101,31 +100,10 @@ MonoBehaviour:
   ID: 
   Recipe: []
   player: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-  prefabDirectionalAttack: {fileID: 5491673637052450766}
+  prefabDirectionalAttack: {fileID: 5482745969404312018, guid: 76b6c3e69499098448ac160b6ae13127, type: 3}
   prefabMeelelAttack: {fileID: 4683585313375719443, guid: 1c6dea17eafdb1740aee58576f815452, type: 3}
   prefabDodgeAttack: {fileID: 5491673637052450766}
   canshoot: 1
---- !u!114 &-5258287916404729086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5491673637052450766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5274888348c9a3d4c8128f5263dbc754, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayName: 
-  time: 0
-  dmg: 0
-  range: 0
-  weaponPosition: {x: 0, y: 0, z: 0}
-  t1: 0
-  direction: {x: 0, y: 0, z: 0}
-  speed: 0
-  prefabBullet: {fileID: 0}
 --- !u!114 &-7313673569692723556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,13 +116,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3f8652c07bc934baa7dca85c151dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayName: 
-  time: 0
-  dmg: 0
-  range: 0
+  displayName: Dodig
+  cooldown: 0
+  dmg: 30
+  range: 5
   weaponPosition: {x: 0, y: 0, z: 0}
   t1: 0
-  duration: 0
-  startIndestructability: 0
-  endIndestructability: 0
-  prefabBomb: {fileID: 0}
+  duration: 0.5
+  startIndestructability: 0.5
+  endIndestructability: 0.2
+  prefabBomb: {fileID: 1817929037859783570, guid: bb805e3eca7cc4146ac3f87c6ef32e48, type: 3}

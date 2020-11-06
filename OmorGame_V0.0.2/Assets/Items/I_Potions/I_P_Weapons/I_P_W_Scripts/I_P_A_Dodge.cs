@@ -14,8 +14,7 @@ public class I_P_A_Dodge : I_P_Attack
     private LifeController playerLifeController;
 
     private bool isDodging;
-    private float speed;
-    private Vector2 startposition;
+    //private Vector2 startposition;
     private Vector2 direction;
     private float d;
     

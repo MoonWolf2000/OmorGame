@@ -15,7 +15,7 @@ public class I_P_W_Bullet : MonoBehaviour
     }
 
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         if(timer> 0)
         timer = timer - Time.fixedDeltaTime;

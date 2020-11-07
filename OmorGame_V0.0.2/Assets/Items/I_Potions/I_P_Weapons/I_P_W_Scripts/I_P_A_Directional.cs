@@ -13,9 +13,8 @@ public class I_P_A_Directional : I_P_Attack
      
         clone = Instantiate(prefabBullet, gameObject.transform.position, gameObject.transform.rotation);
         clone.GetComponent<I_P_W_Bullet>().dmg = dmg;
-        clone.GetComponent<I_P_W_Bullet>().speed = speed;
         clone.GetComponent<I_P_W_Bullet>().direction = direction;
-        
+   
     }
 
     private void Update()

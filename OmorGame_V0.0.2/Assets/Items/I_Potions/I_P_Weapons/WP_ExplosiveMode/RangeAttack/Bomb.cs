@@ -7,45 +7,44 @@ public sealed class Bomb : I_P_W_Bullet
 {
     Collider2D c2D;
     public float timeUntilExplosion;
-    public float MovementDuration;
     public bool isFlying;
-
-
-
-
     private float t;
     private float t1;
-    private void Awake()
-    {
-        c2D = gameObject.GetComponent<Collider2D>();
-        c2D.enabled = false;
-        t = MovementDuration;
-        t1 = timeUntilExplosion;
-    }
+    [HideInInspector]public float timeForMovement;
+
     public void Explode()
     {
         
         c2D.enabled = true;
-        Destroy(gameObject);
 
     }
 
-    protected override void FixedUpdate()
+    public override void WriteValues()
+    {
+        c2D = gameObject.GetComponent<Collider2D>();
+        c2D.enabled = false;
+
+        t = timeForMovement;
+        t1 = timeUntilExplosion;
+        base.WriteValues();
+    }
+    protected override void ForFixed()
     {
         t1 = t1 - Time.fixedDeltaTime;
-        if(t1 <= 0)
+        if (t1 <= 0)
         {
             Explode();
         }
-    
+
         if (!isFlying) return;
         t = t - Time.fixedDeltaTime;
         rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
         if (t <= 0)
         {
             isFlying = false;
-          
+
         }
+
     }
 
 
@@ -54,7 +53,9 @@ public sealed class Bomb : I_P_W_Bullet
         if (collision.gameObject.GetComponent<DamageToPlayerOnTouch>() == true)
         {
             collision.gameObject.GetComponent<LifeController>().lifechangers.Add(-dmg);
+            Debug.Log(collision.name);
             Destroy(gameObject);
+
 
         }
     }

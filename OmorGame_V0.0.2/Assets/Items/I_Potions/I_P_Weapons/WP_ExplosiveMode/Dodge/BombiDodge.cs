@@ -19,6 +19,7 @@ public sealed class BombiDodge :I_P_A_Dodge
         if (didDodge)
         {
         clone = Instantiate(prefabBomb, gameObject.transform.position, gameObject.transform.rotation);
+            clone.GetComponent<I_P_W_Bullet>().WriteValues();
         didDodge = false;
             Debug.Log("i create boom yeheaaa");
         }

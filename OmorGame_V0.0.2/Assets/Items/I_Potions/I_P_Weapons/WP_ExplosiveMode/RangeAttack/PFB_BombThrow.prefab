@@ -45,13 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayName: 
-  cooldown: 0
   dmg: 20
+  cooldown: 0.5
+  timeForMovement: 1
   range: 5
-  weaponPosition: {x: 0, y: 0, z: 0}
-  t1: 0
-  direction: {x: 0, y: 0, z: 0}
   speed: 10
+  direction: {x: 0, y: 0, z: 0}
   prefabBullet: {fileID: 1817929037859783570, guid: bb805e3eca7cc4146ac3f87c6ef32e48, type: 3}
 --- !u!212 &7519925809377683732
 SpriteRenderer:

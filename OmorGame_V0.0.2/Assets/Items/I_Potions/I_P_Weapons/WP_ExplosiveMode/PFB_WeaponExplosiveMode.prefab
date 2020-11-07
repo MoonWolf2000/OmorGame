@@ -96,8 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7899a46fed28048928b9f340232217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  element: 0
   ID: 
+  displayName: 
+  element: 0
   Recipe: []
   player: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
   prefabDirectionalAttack: {fileID: 5482745969404312018, guid: 76b6c3e69499098448ac160b6ae13127, type: 3}
@@ -117,11 +118,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayName: Dodig
-  cooldown: 0
   dmg: 30
+  cooldown: 1
+  timeForMovement: 1
   range: 5
-  weaponPosition: {x: 0, y: 0, z: 0}
-  t1: 0
+  speed: 0
   duration: 0.5
   startIndestructability: 0.5
   endIndestructability: 0.2

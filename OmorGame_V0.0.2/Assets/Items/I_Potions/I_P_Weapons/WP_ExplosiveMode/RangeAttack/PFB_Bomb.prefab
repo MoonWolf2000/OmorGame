@@ -121,7 +121,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 0.5
 --- !u!114 &1172909393666664862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,11 +134,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d42bb91337018f4c9b3b024961af526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   direction: {x: 0, y: 0}
-  timer: 5
+  waitUntilMove: 0
   dmg: 30
   rb: {fileID: 0}
-  timeUntilExplosion: 2
-  MovementDuration: 1
+  speed: 0
+  timeUntilExplosion: 3
   isFlying: 0
+  timeForMovement: 0

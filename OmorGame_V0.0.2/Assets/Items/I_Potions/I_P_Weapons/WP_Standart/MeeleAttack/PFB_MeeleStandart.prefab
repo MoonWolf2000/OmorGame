@@ -123,8 +123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayName: HackSwordpow
-  time: 1
   dmg: 10
+  cooldown: 1
+  timeForMovement: 1
   range: 1
-  weaponPosition: {x: 0, y: 0, z: 0}
+  speed: 0
   enemie: []

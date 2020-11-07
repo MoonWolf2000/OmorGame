@@ -3,27 +3,45 @@
 
 public class I_P_W_Bullet : MonoBehaviour
 {
-    public float speed ;
+    
     public Vector2 direction;
-    public float timer = 0.0f;
-    public float dmg =1;
-
+    public float waitUntilMove = 0.0f;
+    public float dmg = 1;
     public Rigidbody2D rb;
-    private void Start()
+    public float speed;
+
+
+    
+protected virtual void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+      
+        WriteValues();
+
+        
     }
 
 
     protected virtual void FixedUpdate()
     {
-        if(timer> 0)
-        timer = timer - Time.fixedDeltaTime;
-        if (timer <= 0)
+        ForFixed();
+
+    }
+
+    protected  virtual void ForFixed()
+    {
+        if (waitUntilMove > 0)
+            waitUntilMove = waitUntilMove - Time.fixedDeltaTime;
+        if (waitUntilMove <= 0)
         {
-        rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
 
         }
+    }
+
+     public virtual void WriteValues()
+    {
+        rb = gameObject.GetComponent<Rigidbody2D>();
+  
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

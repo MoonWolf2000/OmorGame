@@ -139,6 +139,7 @@ MonoBehaviour:
   dmg: 30
   rb: {fileID: 0}
   speed: 0
-  timeUntilExplosion: 3
+  timeUntilExplosion: 5
   isFlying: 0
+  explosionsRadius: 1.5
   timeForMovement: 0

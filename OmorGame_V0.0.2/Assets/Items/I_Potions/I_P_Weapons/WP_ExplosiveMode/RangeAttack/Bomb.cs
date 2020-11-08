@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
+using UnityEditor.Callbacks;
 using UnityEngine;
 
 public sealed class Bomb : I_P_W_Bullet
@@ -8,15 +10,18 @@ public sealed class Bomb : I_P_W_Bullet
     Collider2D c2D;
     public float timeUntilExplosion;
     public bool isFlying;
+    public float explosionsRadius;
     private float t;
     private float t1;
     [HideInInspector]public float timeForMovement;
+    private bool exploded;
 
     public void Explode()
     {
         
-        c2D.enabled = true;
-
+        //c2D.enabled = true;
+        FindEnemies();
+        exploded = true;
     }
 
     public override void WriteValues()
@@ -27,11 +32,15 @@ public sealed class Bomb : I_P_W_Bullet
         t = timeForMovement;
         t1 = timeUntilExplosion;
         base.WriteValues();
+        exploded = false;
+
+       
     }
     protected override void ForFixed()
     {
+        DebugDrawer();
         t1 = t1 - Time.fixedDeltaTime;
-        if (t1 <= 0)
+        if (t1 <= 0&& exploded == false)
         {
             Explode();
         }
@@ -47,6 +56,33 @@ public sealed class Bomb : I_P_W_Bullet
 
     }
 
+    private void DebugDrawer()
+    {
+        Debug.DrawRay(transform.position, Vector2.up*explosionsRadius,Color.red);
+        Debug.DrawRay(transform.position, Vector2.down*explosionsRadius,Color.red);
+        Debug.DrawRay(transform.position, Vector2.right*explosionsRadius,Color.red);
+        Debug.DrawRay(transform.position, Vector2.left*explosionsRadius,Color.red);
+        Debug.DrawRay(transform.position, new Vector2(1,1).normalized*explosionsRadius,Color.red);
+        Debug.DrawRay(transform.position, new Vector2(1,-1).normalized*explosionsRadius,Color.red);
+        Debug.DrawRay(transform.position, new Vector2(-1,1).normalized*explosionsRadius,Color.red);
+        Debug.DrawRay(transform.position, new Vector2(-1,-1).normalized*explosionsRadius,Color.red);
+   
+    }
+
+    public void FindEnemies()
+    {
+     
+       //List<LifeController> en = new List<LifeController>() ;
+       // en.AddRange(FindObjectsOfType<LifeController>().Where(l => l.gameObject.GetComponent<Enemie>() == true).f(l => l.lifechangers.Add(-dmg)));
+        FindObjectsOfType<LifeController>()
+            .Where(l => l.gameObject.GetComponent<Enemie>() == true)
+            .Where(l =>  Vector3.Distance(l.transform.position,transform.position) <= explosionsRadius)
+            .Select(l => l.lifechangers).ToList()
+            .ForEach(l => l.Add(-dmg));
+        Destroy(gameObject);
+
+    }
+
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -54,9 +90,9 @@ public sealed class Bomb : I_P_W_Bullet
         {
             collision.gameObject.GetComponent<LifeController>().lifechangers.Add(-dmg);
             Debug.Log(collision.name);
-            Destroy(gameObject);
 
 
         }
+            Destroy(gameObject);
     }
 }

@@ -8,11 +8,12 @@ public abstract class I_P_Attack : MonoBehaviour
     public string displayName;
     [InspectorName("Damage")]
     public float dmg;
+    public float cooldown;
     [Space]
-    public float time;
+    public float timeForMovement;
     public float range;
     [Header("just for debug purpose Speed:")]
-    [SerializeField] protected float speed;
+    [SerializeField] public float speed;
     [Space]
 
 
@@ -22,7 +23,7 @@ public abstract class I_P_Attack : MonoBehaviour
     {
         if (t1 <= 0)
         {
-            t1 = time;
+            t1 = cooldown;
             Action();
         }
     }
@@ -34,7 +35,7 @@ public abstract class I_P_Attack : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
-        speed = range / time;
+        speed = range / timeForMovement;
         t1 = Timecheck(t1);        
     }
 

@@ -14,8 +14,7 @@ public class I_P_A_Dodge : I_P_Attack
     private LifeController playerLifeController;
 
     private bool isDodging;
-    private float speed;
-    private Vector2 startposition;
+    //private Vector2 startposition;
     private Vector2 direction;
     private float d;
     
@@ -33,7 +32,6 @@ public class I_P_A_Dodge : I_P_Attack
         direction = playerMoveController.directions[playerMoveController.futureDirection];
         playerLifeController.damageable = false;
         d = duration;
-        speed =  range/duration;
         isDodging = true;
     }
 
@@ -52,11 +50,13 @@ public class I_P_A_Dodge : I_P_Attack
         }
         d = d - Time.fixedDeltaTime;
         playerRigidbody2D.MovePosition(playerRigidbody2D.position + direction * speed * Time.fixedDeltaTime);
+        Physics2D.IgnoreLayerCollision(8, 9,true);
         if (d <= 0)
         {
             isDodging = false;
             playerLifeController.damageable = true;
             playerMoveController.moving = true;
+            Physics2D.IgnoreLayerCollision(8, 9, false);
         }
     }
 

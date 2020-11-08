@@ -97,8 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef8aaf2b1b2a8e49a935a393d094b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  element: 0
   ID: Standardboi
+  displayName: 
+  element: 0
   Recipe: []
   player: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
   prefabDirectionalAttack: {fileID: 5491673637052450766}
@@ -118,13 +119,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayName: Shootiboy
-  time: 1
   dmg: 5
+  cooldown: 1
+  timeForMovement: 1
   range: 2
-  weaponPosition: {x: 0, y: 0, z: 0}
-  t1: 0
-  direction: {x: 0, y: 0, z: 0}
   speed: 5
+  direction: {x: 0, y: 0, z: 0}
   prefabBullet: {fileID: 1817929037859783570, guid: c72bb78190879734f8b5a9d65fd145e5, type: 3}
 --- !u!114 &8796697694371952361
 MonoBehaviour:
@@ -139,11 +139,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayName: 'Wooom '
-  time: 5
   dmg: 0
+  cooldown: 2
+  timeForMovement: 1
   range: 5
-  weaponPosition: {x: 0, y: 0, z: 0}
-  t1: 0
+  speed: 0
   duration: 0.5
   startIndestructability: 0.4
   endIndestructability: 0.1

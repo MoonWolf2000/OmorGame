@@ -2,8 +2,9 @@
 
 public class Potion : MonoBehaviour
 {
-    public Element element;
     public string ID;
+    public string displayName;
+    public Element element;
     public Recipe[] Recipe;
     public virtual void Drink()
     {

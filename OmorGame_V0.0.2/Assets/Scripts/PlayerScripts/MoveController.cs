@@ -1,22 +1,35 @@
 
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class MoveController : MonoBehaviour
 {
     public Vector2 movement;
-    public float speed = 5f ;
-    public Rigidbody2D rb;
+    public float range;
+    public float time = 1;
+    [Inheritance]
+    [SerializeField]private float speed ;
+    private Rigidbody2D rb;
     public bool moving = true;
-    public Transform t;
-    public  int futureDirection = 0;
+    private Transform t;
+    [HideInInspector]public  int futureDirection = 0;
 
-    public  Vector2[] directions = new Vector2[4];
+    [HideInInspector] public  Vector2[] directions = new Vector2[4];
+
+    private void Awake()
+    {
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        t = transform;
+    }
 
     private void FixedUpdate()
     {
+        
+        speed = range / time; 
+
         if (moving == false) return;
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
 

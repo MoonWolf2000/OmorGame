@@ -5,17 +5,16 @@ using UnityEngine;
 public class I_P_A_Directional : I_P_Attack
 {
     public Vector3 direction;
-    public float speed;
     public GameObject prefabBullet;
+    protected    GameObject clone;
 
     protected override void Action()
     {
-        GameObject clone;
+     
         clone = Instantiate(prefabBullet, gameObject.transform.position, gameObject.transform.rotation);
         clone.GetComponent<I_P_W_Bullet>().dmg = dmg;
-        clone.GetComponent<I_P_W_Bullet>().speed = speed;
         clone.GetComponent<I_P_W_Bullet>().direction = direction;
-        
+   
     }
 
     private void Update()

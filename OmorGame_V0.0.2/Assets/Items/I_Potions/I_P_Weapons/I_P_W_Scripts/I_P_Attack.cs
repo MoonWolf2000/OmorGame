@@ -89,9 +89,13 @@ public abstract class I_P_Attack : MonoBehaviour
 
     }
 
-    protected void StatusChanger(List<EnemyStatusController> enemyStatusController,EnemyStatusController.EnenemyStatus enenemyStatus)
+    protected void EnemyStatusChanger(GameObject enemieGameobject,EnemyStatusController.EnenemyStatus enenemyStatus)
     {
-        Debug.Log("Hier muss noch Statuschanger Code hin" + enenemyStatus);
+        if (enemieGameobject.GetComponent<Enemie>())
+        {
+            enemieGameobject.GetComponent<EnemyStatusController>().status = enenemyStatus;
+            Debug.Log("Hier muss noch Statuschanger Code hin  " + enenemyStatus);
+        }
 
     }
 }

@@ -46,7 +46,6 @@ public class I_P_Weapon : Potion
     {
         if (context.canceled && context.duration >= meelelAttack.chargetime)
         {
-        Debug.Log("Now i can booooom");
             meelelAttack.Attack();
 
         }

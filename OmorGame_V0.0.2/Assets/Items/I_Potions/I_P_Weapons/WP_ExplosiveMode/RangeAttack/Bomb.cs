@@ -9,7 +9,6 @@ public sealed class Bomb : I_P_W_Bullet
 {
     Collider2D c2D;
     public float timeUntilExplosion;
-    public bool isFlying;
     public float explosionsRadius;
     private float t;
     private float t1;

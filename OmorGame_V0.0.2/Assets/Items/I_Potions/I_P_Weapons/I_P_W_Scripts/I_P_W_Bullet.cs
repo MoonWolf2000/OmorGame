@@ -7,6 +7,7 @@ public class I_P_W_Bullet : I_P_Attack
     public Vector2 direction;
     public float waitUntilMove = 0.0f;
     public Rigidbody2D rb;
+    public bool isFlying;
 
 
 

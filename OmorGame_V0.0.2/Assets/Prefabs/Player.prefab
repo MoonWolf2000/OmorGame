@@ -539,7 +539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02fdd7900ee4f2845ab23fe472a8b69f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pfb_WeaponPotion: {fileID: 5491673637052450766, guid: ae8fb252a953b3f4084132fafb150105, type: 3}
+  pfb_WeaponPotion: {fileID: 5491673637052450766, guid: 5bf8c75388c0136438933e629a56ff3d, type: 3}
 --- !u!114 &1778967526269222560
 MonoBehaviour:
   m_ObjectHideFlags: 0

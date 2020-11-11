@@ -88,4 +88,10 @@ public abstract class I_P_Attack : MonoBehaviour
             .ForEach(l => l.Add(-dmg));
 
     }
+
+    protected void StatusChanger(List<EnemyStatusController> enemyStatusController,EnemyStatusController.EnenemyStatus enenemyStatus)
+    {
+        Debug.Log("Hier muss noch Statuschanger Code hin" + enenemyStatus);
+
+    }
 }

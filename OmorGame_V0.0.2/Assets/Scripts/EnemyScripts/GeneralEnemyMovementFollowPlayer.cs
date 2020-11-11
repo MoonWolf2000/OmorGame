@@ -27,7 +27,6 @@ public class GeneralEnemyMovementFollowPlayer : MonoBehaviour
         direction = GO_player_rigidbody2D.position- this_rigidbody2D.position;
         direction.Normalize();
         movement = direction;
-        Debug.Log(movement);
 
         if (moving == true )
         {

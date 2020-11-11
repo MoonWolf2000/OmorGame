@@ -134,12 +134,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d42bb91337018f4c9b3b024961af526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayName: 
+  chargetime: 0
+  dmg: 30
+  cooldown: 0
+  speed: 5
+  range: 3
+  timeUsedToCalculateSpeed: 0.5
   direction: {x: 0, y: 0}
   waitUntilMove: 0
-  dmg: 30
   rb: {fileID: 0}
-  speed: 0
   timeUntilExplosion: 5
   isFlying: 0
   explosionsRadius: 1.5
-  timeForMovement: 0

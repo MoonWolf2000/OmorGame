@@ -2,9 +2,8 @@
 
 public class I_P_A_Dodge : I_P_Attack
 {
-    [Header("TIME SETTINGS (time in seconds)")]
+   
     [Space]
-    public float duration;
     [Header("Smaller number means later!")]
     public float startIndestructability;
     public float endIndestructability;
@@ -17,6 +16,7 @@ public class I_P_A_Dodge : I_P_Attack
     //private Vector2 startposition;
     private Vector2 direction;
     private float d;
+    
     
     private void Awake()
     {
@@ -31,14 +31,13 @@ public class I_P_A_Dodge : I_P_Attack
         playerMoveController.moving = false;
         direction = playerMoveController.directions[playerMoveController.futureDirection];
         playerLifeController.damageable = false;
-        d = duration;
+        d = timeUsedToCalculateSpeed;
         isDodging = true;
     }
 
 
-    protected override void FixedUpdate()
+    protected override void FixedUpdateOperations()
     {
-        base.FixedUpdate();
         if (!isDodging) return;
        if(d< startIndestructability && d > endIndestructability)
         {

@@ -23,7 +23,6 @@ public class I_P_Weapon : Potion
 
     protected virtual void Awake()
     {
-        Initalization();
     }
 
     private void Start()
@@ -35,7 +34,7 @@ public class I_P_Weapon : Potion
 
     public void DirectionalAttackTimed(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.canceled && context.duration >=directionalAttack.chargetime )
             directionalAttack.Attack();
     }
     public void DetermineDirectionTimed(InputAction.CallbackContext context)
@@ -45,12 +44,16 @@ public class I_P_Weapon : Potion
     }
     public void MeleeAttackTimed(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.canceled && context.duration >= meelelAttack.chargetime)
+        {
+        Debug.Log("Now i can booooom");
             meelelAttack.Attack();
+
+        }
     }
     public void DodgeAttack(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.canceled && context.duration >= dodgeAttack.chargetime)
             dodgeAttack.Attack();
     }
 

@@ -1,22 +1,35 @@
 
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMoveController : MonoBehaviour
+public class MoveController : MonoBehaviour
 {
-   public Vector2 movement;
-    public float speed = 5f ;
-    public Rigidbody2D rb;
+    public Vector2 movement;
+    public float range;
+    public float time = 1;
+    [Inheritance]
+    [SerializeField] private float speed;
+    private Rigidbody2D rb;
     public bool moving = true;
-    public Transform t;
-  public  int futureDirection = 0;
+    private Transform t;
+    [HideInInspector] public int futureDirection = 0;
 
-    public  Vector2[] directions = new Vector2[4];
+    [HideInInspector] public Vector2[] directions = new Vector2[4];
+
+    private void Awake()
+    {
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        t = transform;
+    }
 
     private void FixedUpdate()
     {
+
+        speed = range / time;
+
         if (moving == false) return;
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
 
@@ -30,28 +43,26 @@ public class PlayerMoveController : MonoBehaviour
     }
 
 
-   private void OrientatioCheck(Vector2 input)
+    private void OrientatioCheck(Vector2 input)
     {
         if (input == new Vector2(0, 0)) return;
         int i = 0;
 
-        float min= 2;
-        foreach(Vector2 v in directions)
+        float min = 2;
+        foreach (Vector2 v in directions)
         {
-          
-            if((input-v).magnitude <= min)
+
+            if ((input - v).magnitude <= min)
             {
                 min = (input - v).magnitude;
                 futureDirection = i;
             }
             i++;
         }
- 
-        //Debug.LogError("StOOOP");
-        switch(futureDirection)
+
+        switch (futureDirection)
         {
             case 0:
-          
                 t.rotation = Quaternion.Euler(0f, 0f, 0f);
                 break;
             case 1:
@@ -70,7 +81,6 @@ public class PlayerMoveController : MonoBehaviour
                 //    break;
 
         }
-
 
     }
 

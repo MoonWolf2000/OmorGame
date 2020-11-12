@@ -52,6 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ThisTextField: {fileID: 1778967525857891717}
   lifecontroller: {fileID: 1778967526269222560}
+  EnemyStatusController: {fileID: 0}
 --- !u!23 &1778967525857891718
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -539,7 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02fdd7900ee4f2845ab23fe472a8b69f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pfb_WeaponPotion: {fileID: 5491673637052450766, guid: 5bf8c75388c0136438933e629a56ff3d, type: 3}
+  pfb_WeaponPotion: {fileID: 5491673637052450766, guid: b0d41dff44001104780dd8b4e7d05e08, type: 3}
 --- !u!114 &1778967526269222560
 MonoBehaviour:
   m_ObjectHideFlags: 0

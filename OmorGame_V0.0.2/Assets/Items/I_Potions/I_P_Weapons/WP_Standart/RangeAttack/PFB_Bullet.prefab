@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4584077392291495794}
   - component: {fileID: 1457929885366701389}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: PFB_Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,8 +134,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ef937ddee731249a17ad00c6f7b7cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  direction: {x: 0, y: 0}
-  timer: 0
+  displayName: 
+  chargetime: 0
   dmg: 5
+  cooldown: 0
+  speed: 0
+  range: 5
+  timeUsedToCalculateSpeed: 1
+  direction: {x: 0, y: 0}
+  waitUntilMove: 0
   rb: {fileID: 0}
+  isFlying: 0

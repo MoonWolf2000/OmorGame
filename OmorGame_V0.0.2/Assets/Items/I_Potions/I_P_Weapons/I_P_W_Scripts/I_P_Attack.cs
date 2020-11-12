@@ -11,7 +11,7 @@ public abstract class I_P_Attack : MonoBehaviour
     public float cooldown;
     [Space]
     [Header("just for debug purpose Speed:")]
-    [SerializeField] public float speed;
+    [SerializeField] public float speed =3;
     [Space]
     public float range;
     [Header("TIME SETTINGS (time in seconds)")]
@@ -21,6 +21,7 @@ public abstract class I_P_Attack : MonoBehaviour
     //public float t1;
     public void Attack()
     {
+        speed = range / timeUsedToCalculateSpeed;
         if (_t1 <= 0)
         {
             _t1 = cooldown;
@@ -35,7 +36,7 @@ public abstract class I_P_Attack : MonoBehaviour
 
     private void Update()
     {
-        speed = range / timeUsedToCalculateSpeed;
+       
     }
 
   private void FixedUpdate()

@@ -127,6 +127,6 @@ MonoBehaviour:
   dmg: 10
   cooldown: 0
   speed: 0
-  range: 1
+  range: 2
   timeUsedToCalculateSpeed: 1
-  enemie: []
+  enemies: []

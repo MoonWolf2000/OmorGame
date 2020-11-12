@@ -563,7 +563,7 @@ PrefabInstance:
     - target: {fileID: 1778967526269222563, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
       propertyPath: pfb_WeaponPotion
       value: 
-      objectReference: {fileID: 5491673637052450766, guid: f18c9847ba09eea4ab8cc4ccf3e9b215, type: 3}
+      objectReference: {fileID: 5491673637052450766, guid: ae8fb252a953b3f4084132fafb150105, type: 3}
     - target: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
       propertyPath: m_Name
       value: Player

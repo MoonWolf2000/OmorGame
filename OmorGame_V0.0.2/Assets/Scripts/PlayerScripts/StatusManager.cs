@@ -7,13 +7,13 @@ public class StatusManager : MonoBehaviour
 {
     public Status[] stati = new Status[2];
     public Status activeStatus;
-    MoveController mc;
+    PlayerMoveController mc;
     private int statusNumber = 0;
 
     private void Start()
     {
         
-        mc = gameObject.GetComponent<MoveController>();
+        mc = gameObject.GetComponent<PlayerMoveController>();
         //mc.speed = activeStatus.speeeeeeed;
         ValuesChanger();
 

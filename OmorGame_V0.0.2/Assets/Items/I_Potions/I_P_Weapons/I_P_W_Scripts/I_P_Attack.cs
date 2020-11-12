@@ -1,29 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.Linq;
 using UnityEngine;
+using System.Collections.Generic;
 
 public abstract class I_P_Attack : MonoBehaviour
 {
     public string displayName;
     [InspectorName("Damage")]
+    public float chargetime;
     public float dmg;
     public float cooldown;
     [Space]
-    public float timeForMovement;
-    public float range;
     [Header("just for debug purpose Speed:")]
-    [SerializeField] public float speed;
+    [SerializeField] public float speed =3;
     [Space]
+    public float range;
+    [Header("TIME SETTINGS (time in seconds)")]
+    public float timeUsedToCalculateSpeed = 1;
 
-
-    private float t1;
-  //public float t1;
+    private float _t1;
+    //public float t1;
     public void Attack()
     {
-        if (t1 <= 0)
+        speed = range / timeUsedToCalculateSpeed;
+        if (_t1 <= 0)
         {
-            t1 = cooldown;
+            _t1 = cooldown;
             Action();
         }
     }
@@ -33,12 +34,28 @@ public abstract class I_P_Attack : MonoBehaviour
 
     }
 
-    protected virtual void FixedUpdate()
+    private void Update()
     {
-        speed = range / timeForMovement;
-        t1 = Timecheck(t1);        
+       
     }
 
+  private void FixedUpdate()
+    {
+
+        FixedUpdateStandartOperation();
+        FixedUpdateOperations();
+    }
+
+    protected virtual void FixedUpdateOperations()
+    {
+
+    }
+
+    protected void FixedUpdateStandartOperation()
+    {
+        speed = range / timeUsedToCalculateSpeed;
+        _t1 = Timecheck(_t1);
+    }
     private static float Timecheck(float localtime)
     {
         if (localtime <= 0)
@@ -49,6 +66,37 @@ public abstract class I_P_Attack : MonoBehaviour
         return localtime;
     }
 
-   
+    protected void DMGtoAll(List<LifeController> lf)
+    {
+        lf.Select(l => l.lifechangers).ToList()
+            .ForEach(l => l.Add(-dmg));
+    }
 
+    protected void DMGtoCollidingOject(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<Enemie>())
+        {
+            collision.gameObject.GetComponent<LifeController>().lifechangers.Add(-dmg);
+        }
+    }
+
+    protected void DMGtoEnemiesinCertainProximity(float distance)
+    {
+        FindObjectsOfType<LifeController>()
+            .Where(l => l.gameObject.GetComponent<Enemie>() == true)
+            .Where(l => Vector3.Distance(l.transform.position, transform.position) <= distance)
+            .Select(l => l.lifechangers).ToList()
+            .ForEach(l => l.Add(-dmg));
+
+    }
+
+    protected void EnemyStatusChanger(GameObject enemieGameobject,EnemyStatusController.EnenemyStatus enenemyStatus)
+    {
+        if (enemieGameobject.GetComponent<Enemie>())
+        {
+            enemieGameobject.GetComponent<EnemyStatusController>().status = enenemyStatus;
+            Debug.Log("Hier muss noch Statuschanger Code hin  " + enenemyStatus);
+        }
+
+    }
 }

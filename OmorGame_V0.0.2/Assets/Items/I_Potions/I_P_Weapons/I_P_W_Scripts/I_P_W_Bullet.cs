@@ -1,14 +1,14 @@
 
 ﻿using UnityEngine;
 
-public class I_P_W_Bullet : MonoBehaviour
+public class I_P_W_Bullet : I_P_Attack
 {
     
     public Vector2 direction;
     public float waitUntilMove = 0.0f;
-    public float dmg = 1;
     public Rigidbody2D rb;
-    public float speed;
+    public bool isFlying;
+
 
 
     
@@ -21,14 +21,11 @@ protected virtual void Start()
     }
 
 
-    protected virtual void FixedUpdate()
-    {
-        ForFixed();
 
-    }
-
-    protected  virtual void ForFixed()
+    protected override void FixedUpdateOperations()
     {
+        base.FixedUpdateOperations();
+   
         if (waitUntilMove > 0)
             waitUntilMove = waitUntilMove - Time.fixedDeltaTime;
         if (waitUntilMove <= 0)

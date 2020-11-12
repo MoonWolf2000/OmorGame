@@ -119,11 +119,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayName: Shootiboy
+  chargetime: 0
   dmg: 5
   cooldown: 1
-  timeForMovement: 1
-  range: 2
   speed: 5
+  range: 2
+  timeUsedToCalculateSpeed: 1
   direction: {x: 0, y: 0, z: 0}
   prefabBullet: {fileID: 1817929037859783570, guid: c72bb78190879734f8b5a9d65fd145e5, type: 3}
 --- !u!114 &8796697694371952361
@@ -139,11 +140,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayName: 'Wooom '
+  chargetime: 0
   dmg: 0
   cooldown: 2
-  timeForMovement: 1
-  range: 5
   speed: 0
-  duration: 0.5
+  range: 5
+  timeUsedToCalculateSpeed: 0.3
   startIndestructability: 0.4
   endIndestructability: 0.1

@@ -9,18 +9,16 @@ public sealed class Bomb : I_P_W_Bullet
 {
     Collider2D c2D;
     public float timeUntilExplosion;
-    public bool isFlying;
     public float explosionsRadius;
     private float t;
     private float t1;
-    [HideInInspector]public float timeForMovement;
     private bool exploded;
 
     public void Explode()
     {
         
         //c2D.enabled = true;
-        FindEnemies();
+        FindEnemiesAndDoDMG();
         exploded = true;
     }
 
@@ -29,15 +27,16 @@ public sealed class Bomb : I_P_W_Bullet
         c2D = gameObject.GetComponent<Collider2D>();
         c2D.enabled = false;
 
-        t = timeForMovement;
+        t = timeUsedToCalculateSpeed;
         t1 = timeUntilExplosion;
         base.WriteValues();
         exploded = false;
 
        
     }
-    protected override void ForFixed()
+    protected override void FixedUpdateOperations()
     {
+
         DebugDrawer();
         t1 = t1 - Time.fixedDeltaTime;
         if (t1 <= 0&& exploded == false)
@@ -69,7 +68,7 @@ public sealed class Bomb : I_P_W_Bullet
    
     }
 
-    public void FindEnemies()
+    public void FindEnemiesAndDoDMG()
     {
      
        //List<LifeController> en = new List<LifeController>() ;

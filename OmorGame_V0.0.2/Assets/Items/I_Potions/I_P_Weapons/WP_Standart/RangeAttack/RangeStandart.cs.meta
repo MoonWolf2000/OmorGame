@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - prefabBullet: {fileID: 1817929037859783570, guid: c72bb78190879734f8b5a9d65fd145e5, type: 3}
+  - prefabBullet: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

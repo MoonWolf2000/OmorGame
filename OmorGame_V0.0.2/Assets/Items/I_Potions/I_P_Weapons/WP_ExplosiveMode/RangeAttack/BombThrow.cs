@@ -8,7 +8,7 @@ public sealed class BombThrow : I_P_A_Directional
     private void Update()
     {
      
-        transform.position = transform.parent.position + direction * range;
+        transform.position = transform.parent.position + direction * prefabBullet.GetComponent<I_P_W_Bullet>().range;
     }
 
 
@@ -18,7 +18,7 @@ public sealed class BombThrow : I_P_A_Directional
         clone = Instantiate(prefabBullet,transform.parent.transform.position,transform.parent.transform.rotation);
         clone.GetComponent<I_P_W_Bullet>().direction = direction;
         clone.GetComponent<I_P_W_Bullet>().speed = speed;
-        clone.GetComponent<Bomb>().timeForMovement = timeForMovement;
-        clone.GetComponent<Bomb>().isFlying = true;
+        clone.GetComponent<I_P_W_Bullet>().timeUsedToCalculateSpeed = timeUsedToCalculateSpeed;
+        clone.GetComponent<I_P_W_Bullet>().isFlying = true;
     }
 }

@@ -118,12 +118,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayName: Dodig
+  chargetime: 0
   dmg: 30
   cooldown: 1
-  timeForMovement: 1
-  range: 5
-  speed: 0
-  duration: 0.5
+  speed: 3.25
+  range: 3
+  timeUsedToCalculateSpeed: 0.2
   startIndestructability: 0.5
   endIndestructability: 0.2
   prefabBomb: {fileID: 1817929037859783570, guid: bb805e3eca7cc4146ac3f87c6ef32e48, type: 3}

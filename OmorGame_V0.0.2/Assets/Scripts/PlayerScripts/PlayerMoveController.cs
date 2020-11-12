@@ -5,7 +5,7 @@ using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MoveController : MonoBehaviour
+public class PlayerMoveController : MonoBehaviour
 {
     public Vector2 movement;
     public float range;

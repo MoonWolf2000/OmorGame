@@ -198,11 +198,11 @@ GameObject:
   - component: {fileID: 1778967526269222573}
   - component: {fileID: 1778967526269222572}
   - component: {fileID: 1778967526269222562}
-  - component: {fileID: 1778967526269222574}
   - component: {fileID: 1778967526269222563}
   - component: {fileID: 1778967526269222560}
   - component: {fileID: 1778967526269222561}
   - component: {fileID: 823341396}
+  - component: {fileID: 4457710057766339408}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1778967526269222574}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MoveController, Assembly-CSharp
         m_MethodName: Moving
         m_Mode: 0
@@ -505,29 +505,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &1778967526269222574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778967526269222569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c3dfa4474a3c9a43875c1677c4fb181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movement: {x: 0, y: 0}
-  range: 5
-  time: 1
-  speed: 5
-  moving: 1
-  futureDirection: 0
-  directions:
-  - {x: 0, y: 1}
-  - {x: 0, y: -1}
-  - {x: 1, y: 0}
-  - {x: -1, y: 0}
 --- !u!114 &1778967526269222563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -540,7 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02fdd7900ee4f2845ab23fe472a8b69f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pfb_WeaponPotion: {fileID: 5491673637052450766, guid: b0d41dff44001104780dd8b4e7d05e08, type: 3}
+  pfb_WeaponPotion: {fileID: 5491673637052450766, guid: ae8fb252a953b3f4084132fafb150105, type: 3}
 --- !u!114 &1778967526269222560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,3 +559,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
+--- !u!114 &4457710057766339408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778967526269222569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b438a02b8b294a942a899671e429dd08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {x: 0, y: 0}
+  range: 0
+  time: 1
+  speed: 5
+  moving: 1
+  futureDirection: 0
+  directions:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}

@@ -6,6 +6,7 @@ public class LifeController : MonoBehaviour
 {
     [ProgressBar(0,50)]
     public float lifepoints = 15;
+    [ReadOnly]
     public bool damageable = true;
     public List<float> lifechangers = new List<float>();
     // Update is called once per frame

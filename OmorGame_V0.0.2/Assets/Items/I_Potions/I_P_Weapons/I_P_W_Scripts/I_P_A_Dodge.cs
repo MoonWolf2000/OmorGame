@@ -7,7 +7,7 @@ public class I_P_A_Dodge : I_P_Attack
     [Header("Smaller number means later!")]
     public float startIndestructability;
     public float endIndestructability;
-    private MoveController playerMoveController;
+    private PlayerMoveController playerMoveController;
     private GameObject player;
     private Rigidbody2D playerRigidbody2D;
     private LifeController playerLifeController;
@@ -21,7 +21,7 @@ public class I_P_A_Dodge : I_P_Attack
     private void Awake()
     {
         player = FindObjectOfType<Player>().gameObject;
-        playerMoveController = player.GetComponent<MoveController>();
+        playerMoveController = player.GetComponent<PlayerMoveController>();
         playerRigidbody2D = player.GetComponent<Rigidbody2D>();
         playerLifeController = player.GetComponent<LifeController>();
     }

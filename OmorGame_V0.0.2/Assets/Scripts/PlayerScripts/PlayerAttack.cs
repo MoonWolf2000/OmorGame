@@ -7,7 +7,7 @@ public class PlayerAttack : MonoBehaviour
 {
     public GameObject pfb_WeaponPotion;
     GameObject go_active_WeaponPotion;
-    WeaponPotion sc_active_WeaponPotion;
+    I_P_Weapon sc_active_WeaponPotion;
 
 
     private void Start()
@@ -18,7 +18,6 @@ public class PlayerAttack : MonoBehaviour
     {
        
     }
-
     public void LoadeWeapon()
     {
         if (go_active_WeaponPotion != null) 
@@ -26,27 +25,24 @@ public class PlayerAttack : MonoBehaviour
             Destroy(go_active_WeaponPotion);
         }
         go_active_WeaponPotion = Instantiate(pfb_WeaponPotion, gameObject.transform);
-        sc_active_WeaponPotion = go_active_WeaponPotion.GetComponent<WeaponPotion>();
+        sc_active_WeaponPotion = go_active_WeaponPotion.GetComponent<I_P_Weapon>();
         sc_active_WeaponPotion.player = this.gameObject;
     }
-    public void Attack(InputAction.CallbackContext contex)
+    public void MeeleAttack(InputAction.CallbackContext context)
     {
-        if (contex.performed)
-        {
-            sc_active_WeaponPotion.Attack(contex);
-
-        }
-
-
+        sc_active_WeaponPotion.MeleeAttackTimed(context);
     }
-
-    public virtual void DetermineDirection(InputAction.CallbackContext contex)
+    public void DirektionalAttack(InputAction.CallbackContext context)
+    { 
+        sc_active_WeaponPotion.DirectionalAttackTimed(context);  
+    }
+    public void DetermineDirection(InputAction.CallbackContext context)
     {
-        if (contex.performed)
-        {
-        sc_active_WeaponPotion.DetermineDirection(contex);
-
-        }
+        sc_active_WeaponPotion.DetermineDirectionTimed(context);
+    }  
+    public void DodgeAttack(InputAction.CallbackContext context)
+    {
+        sc_active_WeaponPotion.DodgeAttack(context);
     }
 
 }

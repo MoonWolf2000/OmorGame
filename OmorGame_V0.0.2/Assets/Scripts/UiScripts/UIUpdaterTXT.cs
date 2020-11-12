@@ -8,6 +8,8 @@ public class UIUpdaterTXT : MonoBehaviour
 
     public TextMeshPro ThisTextField;
     public LifeController lifecontroller;
+    public EnemyStatusController EnemyStatusController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,8 @@ public class UIUpdaterTXT : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ThisTextField.text = "HP " + lifecontroller.lifepoints;
+        ThisTextField.text = "HP " + lifecontroller.lifepoints + " " +
+            "Enemy Status : " +EnemyStatusController.status ;
     }
 }
 

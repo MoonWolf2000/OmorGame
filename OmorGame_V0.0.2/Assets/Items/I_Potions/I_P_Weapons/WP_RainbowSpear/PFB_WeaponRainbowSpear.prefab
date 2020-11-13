@@ -102,7 +102,7 @@ MonoBehaviour:
   Recipe: []
   player: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
   prefabDirectionalAttack: {fileID: 5491673637052450766}
-  prefabMeelelAttack: {fileID: 4683585313375719443, guid: 1c6dea17eafdb1740aee58576f815452, type: 3}
+  prefabMeelelAttack: {fileID: 7866720450119320492, guid: 7a09866f3bc152243b8ba9d96a716f8a, type: 3}
   prefabDodgeAttack: {fileID: 5491673637052450766}
   canshoot: 1
 --- !u!114 &-6934293844501026905

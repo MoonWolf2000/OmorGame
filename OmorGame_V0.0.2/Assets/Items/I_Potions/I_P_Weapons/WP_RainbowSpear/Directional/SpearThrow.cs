@@ -9,14 +9,18 @@ public sealed class SpearThrow : I_P_A_Directional
         if(clone == null)
         {
             BulletInstantiation();
+            clone.transform.parent = transform;
+         
         }
         
         
     }
 
 
+
     protected override void Action()
     {
+        clone.transform.parent = null;
         LetFly();
     }
 

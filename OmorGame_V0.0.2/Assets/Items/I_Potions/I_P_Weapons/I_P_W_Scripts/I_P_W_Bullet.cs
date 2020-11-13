@@ -35,6 +35,7 @@ protected virtual void Start()
             rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
 
         }
+
     }
 
      public virtual void WriteValues()

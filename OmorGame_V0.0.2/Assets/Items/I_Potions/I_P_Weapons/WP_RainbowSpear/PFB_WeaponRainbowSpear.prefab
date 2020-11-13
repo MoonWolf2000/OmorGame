@@ -127,6 +127,7 @@ MonoBehaviour:
   timeUsedToCalculateSpeed: 1
   direction: {x: 0, y: 0, z: 0}
   prefabBullet: {fileID: 1817929037859783570, guid: c72bb78190879734f8b5a9d65fd145e5, type: 3}
+  inversed: 0
 --- !u!114 &8796697694371952361
 MonoBehaviour:
   m_ObjectHideFlags: 0

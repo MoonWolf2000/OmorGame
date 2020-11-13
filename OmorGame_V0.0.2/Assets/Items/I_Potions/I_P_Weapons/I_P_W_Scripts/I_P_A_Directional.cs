@@ -1,19 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public class I_P_A_Directional : I_P_Attack
 {
+    [PropertyOrder(1f)]
     public Vector3 direction;
+    [PropertyOrder(2f)]
+    [Required]
     public GameObject prefabBullet;
-    protected    GameObject clone;
-  
+    protected GameObject clone;
+    private int _inversionNumber = 1;
+
+    [PropertyOrder(1.5f)]
+    [InlineButton(nameof(SwitchInversion),"Change Inversion")]
+    public bool inversed = false;
+
+
     protected override void Action()
     {
-     
+
         clone = Instantiate(prefabBullet, gameObject.transform.position, gameObject.transform.rotation);
         clone.GetComponent<I_P_W_Bullet>().dmg = dmg;
-        clone.GetComponent<I_P_W_Bullet>().direction = direction;
+        clone.GetComponent<I_P_W_Bullet>().direction = direction*_inversionNumber;
         clone.GetComponent<I_P_W_Bullet>().timeUsedToCalculateSpeed = timeUsedToCalculateSpeed;
         clone.GetComponent<I_P_W_Bullet>().isFlying = true;
 
@@ -22,6 +32,13 @@ public class I_P_A_Directional : I_P_Attack
 
     private void Update()
     {
-        Debug.DrawRay(transform.position, direction*4,Color.green);
+        Debug.DrawRay(transform.position, direction * 4, Color.green);
     }
+    private void SwitchInversion()
+    {
+        inversed = !inversed;
+        _inversionNumber = -_inversionNumber;
+    }
+
+
 }

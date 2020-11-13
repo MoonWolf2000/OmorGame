@@ -2,17 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpearStab : MonoBehaviour
+public  class SpearStab : I_P_A_Melee
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool HoldingSpear;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
 }

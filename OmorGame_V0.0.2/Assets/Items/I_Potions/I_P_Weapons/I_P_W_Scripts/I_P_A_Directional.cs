@@ -20,14 +20,23 @@ public class I_P_A_Directional : I_P_Attack
 
     protected override void Action()
     {
+        BulletInstantiation();
+        LetFly();
+        
+    }
 
-        clone = Instantiate(prefabBullet, gameObject.transform.position, gameObject.transform.rotation);
-        clone.GetComponent<I_P_W_Bullet>().dmg = dmg;
-        clone.GetComponent<I_P_W_Bullet>().direction = direction*_inversionNumber;
-        clone.GetComponent<I_P_W_Bullet>().timeUsedToCalculateSpeed = timeUsedToCalculateSpeed;
+    protected void LetFly()
+    {
         clone.GetComponent<I_P_W_Bullet>().isFlying = true;
 
+    }
 
+    protected  void BulletInstantiation()
+    {
+        clone = Instantiate(prefabBullet, gameObject.transform.position, gameObject.transform.rotation);
+        clone.GetComponent<I_P_W_Bullet>().dmg = dmg;
+        clone.GetComponent<I_P_W_Bullet>().direction = direction * _inversionNumber;
+        clone.GetComponent<I_P_W_Bullet>().timeUsedToCalculateSpeed = timeUsedToCalculateSpeed;
     }
 
     private void Update()

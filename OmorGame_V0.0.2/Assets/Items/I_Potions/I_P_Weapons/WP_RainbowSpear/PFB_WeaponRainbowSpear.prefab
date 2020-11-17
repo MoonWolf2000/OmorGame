@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5491673637052450765}
   - component: {fileID: 5491673637052450763}
-  - component: {fileID: -6243089753680303084}
   - component: {fileID: -6934293844501026905}
+  - component: {fileID: 8604073654743113172}
+  - component: {fileID: 5775850462732245091}
   m_Layer: 0
   m_Name: PFB_WeaponRainbowSpear
   m_TagString: Untagged
@@ -84,27 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-6243089753680303084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5491673637052450766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fef8aaf2b1b2a8e49a935a393d094b75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: Standardboi
-  displayName: 
-  element: 0
-  Recipe: []
-  player: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-  prefabDirectionalAttack: {fileID: 5491673637052450766}
-  prefabMeelelAttack: {fileID: 7866720450119320492, guid: 7a09866f3bc152243b8ba9d96a716f8a, type: 3}
-  prefabDodgeAttack: {fileID: 5491673637052450766}
-  canshoot: 1
 --- !u!114 &-6934293844501026905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayName: 
-  chargetime: 2
+  chargetime: 0.36
   dmg: 0
   cooldown: 0
   speed: 3
@@ -127,3 +107,46 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   prefabBullet: {fileID: 7866720450119320492, guid: 7a09866f3bc152243b8ba9d96a716f8a, type: 3}
   inversed: 0
+--- !u!114 &8604073654743113172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5491673637052450766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aabf5a66e9396940baf644c25eba7a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayName: 
+  chargetime: 0
+  dmg: 0
+  cooldown: 0
+  speed: 3
+  range: 0
+  timeUsedToCalculateSpeed: 1
+  startIndestructability: 0
+  endIndestructability: 0
+--- !u!114 &5775850462732245091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5491673637052450766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ff862195bcfbb4fa5cf0ec8a343d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 
+  displayName: 
+  element: 0
+  Recipe: []
+  player: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
+  prefabDirectionalAttack: {fileID: 5491673637052450766}
+  prefabMeelelAttack: {fileID: 7866720450119320492, guid: 7a09866f3bc152243b8ba9d96a716f8a, type: 3}
+  prefabDodgeAttack: {fileID: 5491673637052450766}
+  canshoot: 1
+  sortedElementList: 000000000100000002000000

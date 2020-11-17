@@ -1,28 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public sealed class SpearThrow : I_P_A_Directional
 {
-    protected override void FixedUpdateOperations()
+
+    private void Start()
     {
-        if(clone == null)
-        {
-            BulletInstantiation();
-            clone.transform.parent = transform;
-         
-        }
-        
-        
+        _needsBullet = false;
+        clone = GetComponent<I_P_Weapon>().GameObjectMA;
+        Debug.Log(clone.name);
     }
 
-
-
+    
+    [Button]
     protected override void Action()
     {
-        clone.transform.parent = null;
+        clone = GetComponent<I_P_Weapon>().GameObjectMA;
+        
+        Debug.Log("sdfogdfgjkjkskjdfszkekjsepo"+ clone.name);
         LetFly();
     }
+
+    protected override void FixedUpdateOperations()
+    {
+ 
+        if(clone = null)
+        clone = GetComponent<I_P_Weapon>().GameObjectMA;
+
+    }
+
 
 
 

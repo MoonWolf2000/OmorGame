@@ -7,8 +7,9 @@ public class I_P_A_Directional : I_P_Attack
 {
     [PropertyOrder(1f)]
     public Vector3 direction;
+    protected static bool _needsBullet = true;
     [PropertyOrder(2f)]
-    [Required]
+    [ShowIf(nameof(_needsBullet))]
     public GameObject prefabBullet;
     protected GameObject clone;
     private int _inversionNumber = 1;

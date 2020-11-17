@@ -9,9 +9,24 @@ public class I_P_Weapon : Potion
     public GameObject prefabMeelelAttack;
     public GameObject prefabDodgeAttack;
 
-    private GameObject gameObjectDA;
-    private GameObject gameObjectMA;
-    private GameObject gameObjectDoA;
+    [HideInInspector]
+    public GameObject GameObjectMA
+    {
+        protected set;
+        get;
+    }
+    public GameObject GameObjectDoA
+
+    {
+        protected set;
+        get;
+    }
+
+    public GameObject GameObjectDA
+    {
+        protected set;
+        get;
+    }
 
     private I_P_A_Directional directionalAttack;
     private I_P_A_Melee meelelAttack;
@@ -23,18 +38,19 @@ public class I_P_Weapon : Potion
 
     protected virtual void Awake()
     {
+        Initalization();
     }
 
     private void Start()
     {
-        Initalization();
     }
 
 
 
     public void DirectionalAttackTimed(InputAction.CallbackContext context)
     {
-        if (context.canceled && context.duration >=directionalAttack.chargetime )
+
+        if (context.canceled && context.duration >= directionalAttack.chargetime)
             directionalAttack.Attack();
     }
     public void DetermineDirectionTimed(InputAction.CallbackContext context)
@@ -73,11 +89,11 @@ public class I_P_Weapon : Potion
 
     private void Initalization()
     {
-        gameObjectDA = PrefabCheck(prefabDirectionalAttack);
-        gameObjectMA = PrefabCheck(prefabMeelelAttack);
-        gameObjectDoA = PrefabCheck(prefabDodgeAttack);
-        directionalAttack = gameObjectDA.GetComponent<I_P_A_Directional>();
-        meelelAttack = gameObjectMA.GetComponent<I_P_A_Melee>();
-        dodgeAttack = gameObjectDoA.GetComponent<I_P_A_Dodge>();
+        GameObjectDA = PrefabCheck(prefabDirectionalAttack);
+        GameObjectMA = PrefabCheck(prefabMeelelAttack);
+        GameObjectDoA = PrefabCheck(prefabDodgeAttack);
+        directionalAttack = GameObjectDA.GetComponent<I_P_A_Directional>();
+        meelelAttack = GameObjectMA.GetComponent<I_P_A_Melee>();
+        dodgeAttack = GameObjectDoA.GetComponent<I_P_A_Dodge>();
     }
 }

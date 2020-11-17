@@ -8,18 +8,24 @@ public sealed  class Spear : I_P_W_Bullet
 
     public override void WriteValues()
     {
+        rb = gameObject.GetComponent<Rigidbody2D>();
+
         _t = timeUsedToCalculateSpeed;
     }
 
     protected override void FixedUpdateOperations()
     {
-        if (!isFlying) return;
-        _t = _t - Time.fixedDeltaTime;
-        base.FixedUpdateOperations();
+        if (!isFlying) 
+        {
+            transform.position = transform.parent.position;
+        return;
+        
+        } 
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<Enemie>())
+        if (collision.gameObject.GetComponent<Enemie>() && isFlying)
         {
 
             EnemyStatusChanger(collision.gameObject, EnemyStatusController.EnenemyStatus.b);
@@ -27,4 +33,12 @@ public sealed  class Spear : I_P_W_Bullet
             Destroy(gameObject);
         }
     }
+
+    private void OnDestroy()
+    {
+        GetComponentInParent<RainbowSpearPotion>().ReplaceSpear();
+        Debug.Log("i fullfilled my duty" + enabled);
+    }
+
+    
 }

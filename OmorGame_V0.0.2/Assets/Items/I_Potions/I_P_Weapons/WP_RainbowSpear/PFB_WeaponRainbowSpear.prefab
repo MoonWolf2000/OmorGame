@@ -99,11 +99,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: 
   chargetime: 0.36
-  dmg: 0
+  dmg: 1.99
   cooldown: 0
   speed: 3
   range: 1
-  timeUsedToCalculateSpeed: 1
+  timeUsedToCalculateSpeed: 0.2
   direction: {x: 0, y: 0, z: 0}
   prefabBullet: {fileID: 7866720450119320492, guid: 7a09866f3bc152243b8ba9d96a716f8a, type: 3}
   inversed: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
   dmg: 0
   cooldown: 0
   speed: 3
-  range: 0
+  range: 5.12
   timeUsedToCalculateSpeed: 1
   startIndestructability: 0
   endIndestructability: 0

@@ -18,7 +18,6 @@ public sealed class SpearThrow : I_P_A_Directional
     protected override void Action()
     {
         clone = GetComponent<I_P_Weapon>().GameObjectMA;
-        
         Debug.Log("sdfogdfgjkjkskjdfszkekjsepo"+ clone.name);
         LetFly();
     }

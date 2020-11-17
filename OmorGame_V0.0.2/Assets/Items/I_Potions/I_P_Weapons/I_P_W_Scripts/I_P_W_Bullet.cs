@@ -10,7 +10,7 @@ public class I_P_W_Bullet : I_P_Attack
     [Required]
     public Rigidbody2D rb;
     public bool isFlying;
-    private float _t;
+    public float _t;
 
 
 

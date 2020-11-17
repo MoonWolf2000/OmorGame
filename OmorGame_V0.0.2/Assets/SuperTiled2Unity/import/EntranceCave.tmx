@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="left-down" width="10" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="11">
+ <editorsettings>
+  <export target="../../../../../ZeldaGit/Zeldalike/Assets/SuperTiled2Unity/import/EntranceCave.tmx" format="tmx"/>
+ </editorsettings>
+ <tileset firstgid="1" source="Cave.tsx"/>
+ <tileset firstgid="1001" source="../../../../../ZeldaGit/Zeldalike/Assets/SuperTiled2Unity/import/Overworld.tsx"/>
+ <layer id="1" name="ECave" width="10" height="10">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1
+</data>
+ </layer>
+ <layer id="2" name="ECaveColission" width="10" height="10">
+  <data encoding="csv">
+123,123,124,163,163,163,163,122,124,172,
+163,163,164,203,203,203,203,162,164,212,
+203,203,204,0,0,0,0,202,204,252,
+209,0,0,0,0,0,0,0,0,0,
+169,0,1116,0,0,0,0,0,0,0,
+249,0,0,0,0,0,0,0,172,173,
+173,174,0,0,0,0,0,0,212,213,
+213,215,173,173,174,0,0,172,216,213,
+213,213,213,213,215,173,173,216,213,175,
+253,253,176,213,213,213,213,175,253,254
+</data>
+ </layer>
+ <objectgroup id="4" name="colissionsEC">
+  <object id="1" x="-0.75" y="-1" width="47.75" height="47.75"/>
+  <object id="2" x="45.25" y="-3.25" width="68.5" height="35"/>
+  <object id="3" x="111.25" y="-2.25" width="49.5" height="50"/>
+  <object id="4" x="32.25" y="64" width="15.5" height="9.25"/>
+  <object id="5" x="-0.75" y="53.75" width="15" height="39.75"/>
+  <object id="6" x="-1.25" y="100" width="29.25" height="60"/>
+  <object id="7" x="22.75" y="115.25" width="55.5" height="46"/>
+  <object id="8" x="73.5" y="131.25" width="47.5" height="28.75"/>
+  <object id="9" x="116.5" y="116.75" width="38.5" height="38.75"/>
+  <object id="10" x="131.75" y="85.75" width="30.25" height="54.75"/>
+ </objectgroup>
+ <layer id="3" name="ECaveaboveground" width="10" height="10">
+  <data encoding="csv">
+0,201,0,1107,0,241,0,0,201,0,
+0,241,0,1107,0,0,0,0,241,0,
+0,0,0,1107,0,1068,1148,0,0,0,
+0,1109,0,1107,0,0,0,0,0,0,
+0,0,0,1107,0,0,0,0,0,0,
+0,0,0,1147,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,1150,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>

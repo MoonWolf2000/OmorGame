@@ -5,7 +5,10 @@ using UnityEngine;
 public sealed  class Spear : I_P_W_Bullet
 {
     private float _t;
-
+    private void OnEnable()
+    {
+        WriteValues();
+    }
     public override void WriteValues()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -17,10 +20,11 @@ public sealed  class Spear : I_P_W_Bullet
     {
         if (!isFlying) 
         {
-            transform.position = transform.parent.position;
-        return;
+            rb.MovePosition(transform.parent.position);
+            return;
         
-        } 
+        }
+        base.FixedUpdateOperations();
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,11 +38,13 @@ public sealed  class Spear : I_P_W_Bullet
         }
     }
 
-    private void OnDestroy()
+
+    private void OnDisable()
     {
         GetComponentInParent<RainbowSpearPotion>().ReplaceSpear();
-        Debug.Log("i fullfilled my duty" + enabled);
+        Debug.Log("sdfdfsfsadf");
     }
+
 
     
 }

@@ -12,8 +12,8 @@ public sealed class RainbowSpearPotion : I_P_Weapon
     private int _elementIndex = 0;
     public void ReplaceSpear()
     {
-        GameObjectMA = Instantiate(prefabMeelelAttack, transform);
-
+        GameObjectMA = Instantiate(prefabMeelelAttack, transform.position,transform.rotation) ;
+        GameObjectMA.transform.parent = gameObject.transform;
     }
 
 }

@@ -16,8 +16,16 @@ public class PlayerMoveController : MonoBehaviour
     public bool moving = true;
     private Transform t;
     [HideInInspector] public int futureDirection = 0;
+    public static Vector2[] directions = new Vector2[]
+    {
+      
+       Vector2.up,
+       Vector2.down,
+       Vector2.right,
+       Vector2.left,
 
-    [HideInInspector] public Vector2[] directions = new Vector2[4];
+    };
+
 
     private void Awake()
     {

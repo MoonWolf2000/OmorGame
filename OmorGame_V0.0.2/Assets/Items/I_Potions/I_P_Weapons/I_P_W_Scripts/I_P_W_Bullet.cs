@@ -36,6 +36,7 @@ public class I_P_W_Bullet : I_P_Attack
             if (_t <= 0)
             {
                 isFlying = false;
+                Destroy(gameObject);
 
             }
 

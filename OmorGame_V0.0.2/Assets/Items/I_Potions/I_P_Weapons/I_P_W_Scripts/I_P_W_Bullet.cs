@@ -25,11 +25,9 @@ public class I_P_W_Bullet : I_P_Attack
 
     protected override void FixedUpdateOperations()
     {
-        base.FixedUpdateOperations();
 
         if (waitUntilMove > 0)
             waitUntilMove = waitUntilMove - Time.fixedDeltaTime;
-        if (waitUntilMove <= 0)
         {
             _t = _t - Time.fixedDeltaTime;
             rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
@@ -39,7 +37,6 @@ public class I_P_W_Bullet : I_P_Attack
                 Destroy(gameObject);
 
             }
-
 
         }
 
@@ -64,6 +61,8 @@ public class I_P_W_Bullet : I_P_Attack
     {
         Destroy(gameObject);
     }
+
+
 
 
 }

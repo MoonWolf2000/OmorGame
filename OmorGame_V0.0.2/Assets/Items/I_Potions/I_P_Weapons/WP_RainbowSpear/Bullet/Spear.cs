@@ -18,11 +18,11 @@ public sealed  class Spear : I_P_W_Bullet
 
     protected override void FixedUpdateOperations()
     {
+        
         if (!isFlying) 
         {
-            rb.MovePosition(transform.parent.position);
-            return;
-        
+            rb.position = transform.parent.position;
+            return; 
         }
         base.FixedUpdateOperations();
 
@@ -39,11 +39,7 @@ public sealed  class Spear : I_P_W_Bullet
     }
 
 
-    private void OnDisable()
-    {
-        GetComponentInParent<RainbowSpearPotion>().ReplaceSpear();
-        Debug.Log("sdfdfsfsadf");
-    }
+
 
 
     

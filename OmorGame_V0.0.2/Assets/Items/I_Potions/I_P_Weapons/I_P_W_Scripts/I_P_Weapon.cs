@@ -96,4 +96,10 @@ public class I_P_Weapon : Potion
         meelelAttack = GameObjectMA.GetComponent<I_P_A_Melee>();
         dodgeAttack = GameObjectDoA.GetComponent<I_P_A_Dodge>();
     }
+    /// <summary>
+    /// counts doen time untill its zero should to be in fixdeupdate ;
+    /// </summary>
+    /// <param name="temptime"></param>
+    /// <returns></returns>
+
 }

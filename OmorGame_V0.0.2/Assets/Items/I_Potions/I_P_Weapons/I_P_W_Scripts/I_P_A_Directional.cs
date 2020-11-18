@@ -6,7 +6,7 @@ using Sirenix.OdinInspector;
 public class I_P_A_Directional : I_P_Attack
 {
     [PropertyOrder(1f)]
-    public Vector3 direction;
+    public Vector2 direction;
     protected static bool _needsBullet = true;
     [PropertyOrder(2f)]
     [ShowIf(nameof(_needsBullet))]
@@ -28,6 +28,7 @@ public class I_P_A_Directional : I_P_Attack
 
     protected void LetFly()
     {
+        if (clone == null) return;
         clone.GetComponent<I_P_W_Bullet>().direction = direction * _inversionNumber;
         clone.GetComponent<I_P_W_Bullet>().dmg = dmg;
         clone.GetComponent<I_P_W_Bullet>().timeUsedToCalculateSpeed = timeUsedToCalculateSpeed;
@@ -50,5 +51,8 @@ public class I_P_A_Directional : I_P_Attack
         _inversionNumber = -_inversionNumber;
     }
 
-
+    protected void DirectionToNSWE()
+    {
+        direction = new Vector2(Mathf.Round(direction.x), Mathf.Round(direction.y));
+    }
 }

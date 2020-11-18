@@ -102,11 +102,14 @@ MonoBehaviour:
   dmg: 1.99
   cooldown: 0
   speed: 3
-  range: 1
-  timeUsedToCalculateSpeed: 0.2
+  range: 2
+  timeUsedToCalculateSpeed: 5
   direction: {x: 0, y: 0, z: 0}
   prefabBullet: {fileID: 7866720450119320492, guid: 7a09866f3bc152243b8ba9d96a716f8a, type: 3}
   inversed: 0
+  spearSpawnTime: 10
+  _sst: 0
+  _canrespawn: 1
 --- !u!114 &8604073654743113172
 MonoBehaviour:
   m_ObjectHideFlags: 0

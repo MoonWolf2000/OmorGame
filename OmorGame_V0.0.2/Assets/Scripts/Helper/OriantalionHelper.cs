@@ -35,6 +35,27 @@ public static class OriantalionHelper
 
     }
 
+    public static  Vector2  GiveDirection(this Transform t)
+    {
+        switch (t.rotation)
+        {
+            case Quaternion q when q.Equals(Quaternion.Euler(0f, 0f, 0)):
+                return directions[0];
+            case Quaternion q when q.Equals(Quaternion.Euler(0f, 0f, 180f)):
+                return directions[1];
+            case Quaternion q when q.Equals(Quaternion.Euler(0f, 0f, 270f)):
+                return directions[2];
+            case Quaternion q when q.Equals(Quaternion.Euler(0f, 0f, 90f)):
+                return directions[3];
+            
+            default:
+                Debug.LogError("default case in switchs" + t.rotation);
+                return Vector2.zero;
+
+        }
+
+    }
+
 
     public static void RotationToNWES(this Rigidbody2D rb,Vector2 input)
     {

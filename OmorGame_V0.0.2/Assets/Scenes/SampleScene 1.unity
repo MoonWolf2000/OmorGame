@@ -196,6 +196,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dd8769c9445bd148b6138be0113e2ba, type: 3}
+--- !u!114 &170534577 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4457710057766339408, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
+  m_PrefabInstance: {fileID: 1778967527190433784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b438a02b8b294a942a899671e429dd08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &199776527
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +242,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 3895
 --- !u!114 &199776529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,7 +424,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 260, y: 149}
+  m_AnchoredPosition: {x: 217, y: 118}
   m_SizeDelta: {x: 134.3457, y: 58.785034}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &834135822
@@ -556,6 +567,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 823341396, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
+      propertyPath: test
+      value: 
+      objectReference: {fileID: 102900000, guid: febd6fcfa2cf981488e7c4912ebcad61, type: 3}
     - target: {fileID: 1778967525857891719, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
       propertyPath: EnemyStatusController
       value: 
@@ -563,7 +578,7 @@ PrefabInstance:
     - target: {fileID: 1778967526269222563, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
       propertyPath: pfb_WeaponPotion
       value: 
-      objectReference: {fileID: 5491673637052450766, guid: ae8fb252a953b3f4084132fafb150105, type: 3}
+      objectReference: {fileID: 5491673637052450766, guid: 5bf20f01f702fe24e806eb1146302f19, type: 3}
     - target: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
       propertyPath: m_Name
       value: Player
@@ -616,5 +631,21 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 170534577}
+    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Moving
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778967526269222571, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMoveController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457710057766339408, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
+      propertyPath: range
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}

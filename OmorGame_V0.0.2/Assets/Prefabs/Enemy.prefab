@@ -52,6 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ThisTextField: {fileID: 7156064098495307037}
   lifecontroller: {fileID: 7156064098865048868}
+  EnemyStatusController: {fileID: 0}
 --- !u!23 &7156064098495307036
 MeshRenderer:
   m_ObjectHideFlags: 0

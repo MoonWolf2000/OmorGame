@@ -10,7 +10,6 @@ public sealed class Bomb : I_P_W_Bullet
     Collider2D c2D;
     public float timeUntilExplosion;
     public float explosionsRadius;
-    private float t;
     private float t1;
     private bool exploded;
 
@@ -27,7 +26,7 @@ public sealed class Bomb : I_P_W_Bullet
         c2D = gameObject.GetComponent<Collider2D>();
         c2D.enabled = false;
 
-        t = timeUsedToCalculateSpeed;
+        _t = timeUsedToCalculateSpeed;
         t1 = timeUntilExplosion;
         base.WriteValues();
         exploded = false;
@@ -45,9 +44,9 @@ public sealed class Bomb : I_P_W_Bullet
         }
 
         if (!isFlying) return;
-        t = t - Time.fixedDeltaTime;
+        _t = _t - Time.fixedDeltaTime;
         rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
-        if (t <= 0)
+        if (_t <= 0)
         {
             isFlying = false;
 

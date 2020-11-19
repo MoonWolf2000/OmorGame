@@ -8,7 +8,7 @@ public sealed class BombThrow : I_P_A_Directional
     private void Update()
     {
      
-        transform.position = transform.parent.position + direction * prefabBullet.GetComponent<I_P_W_Bullet>().range;
+        transform.position = new Vector2(transform.parent.position.x, transform.parent.position.y) + direction * prefabBullet.GetComponent<I_P_W_Bullet>().range;
     }
 
 

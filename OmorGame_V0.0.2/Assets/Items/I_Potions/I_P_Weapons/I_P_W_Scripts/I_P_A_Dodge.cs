@@ -29,7 +29,7 @@ public class I_P_A_Dodge : I_P_Attack
     protected override void Action()
     {
         playerMoveController.moving = false;
-        direction = playerMoveController.directions[playerMoveController.futureDirection];
+        direction = PlayerMoveController.directions[playerMoveController.futureDirection];
         playerLifeController.damageable = false;
         d = timeUsedToCalculateSpeed;
         isDodging = true;

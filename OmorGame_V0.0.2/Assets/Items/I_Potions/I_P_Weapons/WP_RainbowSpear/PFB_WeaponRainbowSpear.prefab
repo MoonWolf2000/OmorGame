@@ -149,4 +149,4 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   prefabBullet: {fileID: 7866720450119320492, guid: 65e4989ccebe852408cc6a83d358878e, type: 3}
   inversed: 0
-  sortedElementList: 00000000
+  sortedElementList: 010000000000000000000000

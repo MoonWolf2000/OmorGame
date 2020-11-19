@@ -12,4 +12,8 @@ public sealed class RainbowSpearPotion : I_P_Weapon
         GameObjectMA.transform.parent = gameObject.transform;
     }
 
+
+
+
+    
 }

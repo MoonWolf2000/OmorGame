@@ -36,6 +36,16 @@ public static class OriantalionHelper
     }
 
 
+    public static void RotationToNWES(this Rigidbody2D rb,Vector2 input)
+    {
+        rb.transform.rotation = GiveOriantation(input);
+    }
+    public static void RotationToNWES(this Transform t,Vector2 input)
+    {
+        t.rotation = GiveOriantation(input);
+    }
+
+
     public static void AssignOrientation(this Transform t,Vector2 v)
     {
         if (v == Vector2.zero) return; 

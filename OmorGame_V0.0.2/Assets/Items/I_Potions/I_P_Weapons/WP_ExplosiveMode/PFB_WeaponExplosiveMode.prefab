@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5491673637052450765}
   - component: {fileID: 5491673637052450763}
-  - component: {fileID: 8604073654743113172}
-  - component: {fileID: 5775850462732245091}
-  - component: {fileID: 2333330427014713483}
+  - component: {fileID: -2905710401422253614}
+  - component: {fileID: -7313673569692723556}
   m_Layer: 0
-  m_Name: PFB_WeaponRainbowSpear
+  m_Name: PFB_WeaponExplosiveMode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8604073654743113172
+--- !u!114 &-2905710401422253614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,28 +93,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5491673637052450766}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aabf5a66e9396940baf644c25eba7a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayName: 
-  chargetime: 0
-  dmg: 0
-  cooldown: 0
-  speed: 3
-  range: 5.12
-  timeUsedToCalculateSpeed: 1
-  startIndestructability: 0
-  endIndestructability: 0
---- !u!114 &5775850462732245091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5491673637052450766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62ff862195bcfbb4fa5cf0ec8a343d25, type: 3}
+  m_Script: {fileID: 11500000, guid: da7899a46fed28048928b9f340232217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 
@@ -123,11 +101,11 @@ MonoBehaviour:
   element: 0
   Recipe: []
   player: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
-  prefabDirectionalAttack: {fileID: 5491673637052450766}
-  prefabMeelelAttack: {fileID: 7866720450119320492, guid: 7a09866f3bc152243b8ba9d96a716f8a, type: 3}
+  prefabDirectionalAttack: {fileID: 5482745969404312018, guid: 76b6c3e69499098448ac160b6ae13127, type: 3}
+  prefabMeelelAttack: {fileID: 4683585313375719443, guid: 1c6dea17eafdb1740aee58576f815452, type: 3}
   prefabDodgeAttack: {fileID: 5491673637052450766}
   canshoot: 1
---- !u!114 &2333330427014713483
+--- !u!114 &-7313673569692723556
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,17 +114,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5491673637052450766}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb552741f9592604882cc993c40d1e40, type: 3}
+  m_Script: {fileID: 11500000, guid: af3f8652c07bc934baa7dca85c151dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayName: 
-  chargetime: 0.3
-  dmg: 0
-  cooldown: 0.2
-  speed: 3
-  range: 0
-  timeUsedToCalculateSpeed: 1
-  direction: {x: 0, y: 0}
-  prefabBullet: {fileID: 7866720450119320492, guid: 65e4989ccebe852408cc6a83d358878e, type: 3}
-  inversed: 0
-  sortedElementList: 00000000
+  displayName: Dodig
+  chargetime: 0
+  dmg: 30
+  cooldown: 1
+  speed: 3.25
+  range: 3
+  timeUsedToCalculateSpeed: 0.2
+  startIndestructability: 0.5
+  endIndestructability: 0.2
+  prefabBomb: {fileID: 1817929037859783570, guid: bb805e3eca7cc4146ac3f87c6ef32e48, type: 3}

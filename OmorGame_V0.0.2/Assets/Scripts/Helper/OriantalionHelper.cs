@@ -53,8 +53,9 @@ public static class OriantalionHelper
     }
 
 
-    public static void LimitDirectionToNWES(this Vector2 direction)
+    public static void LimitDirectionToNWES(this ref Vector2 direction)
     {
-        direction = directions.OrderBy(d => (direction - d).magnitude).First();
+        var    temp = direction;
+        direction = directions.OrderBy(d => (temp - d).magnitude).First();
     }
 }

@@ -136,10 +136,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: 
   chargetime: 0
-  dmg: 0
+  dmg: 10
   cooldown: 0
   speed: 3
-  range: 0
+  range: 1
   timeUsedToCalculateSpeed: 1
   enemies: []
   HoldingSpear: 0

@@ -115,9 +115,10 @@ MonoBehaviour:
   displayName: 
   chargetime: 0
   dmg: 1
-  cooldown: 0.1
+  cooldown: 0.3
   speed: 3
   range: 1
   timeUsedToCalculateSpeed: 1
   enemies: []
   HoldingSpear: 0
+  cooldownBecauseOfAura: 2

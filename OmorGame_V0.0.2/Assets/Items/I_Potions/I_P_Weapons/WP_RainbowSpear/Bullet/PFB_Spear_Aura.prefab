@@ -140,7 +140,7 @@ MonoBehaviour:
   cooldown: 0
   speed: 3
   range: 5
-  timeUsedToCalculateSpeed: 0.1
+  timeUsedToCalculateSpeed: 0.5
   direction: {x: 0, y: 0}
   waitUntilMove: 0
   rb: {fileID: 0}

@@ -26,6 +26,8 @@ public sealed class SpearThrow : I_P_A_Directional
         direction.LimitDirectionToNWES();
         Debug.Log(direction);
         Debug.Log(_elementIndex);
+        gameObject.GetComponentInChildren<SpearStab>().refillTimer();
+        Debug.Log(gameObject.GetComponentInChildren<SpearStab>());
         LetFly();
     }
 

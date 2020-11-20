@@ -5,7 +5,7 @@ public class Potion : MonoBehaviour
     public string ID;
     public string displayName;
     public Element element;
-    public Recipe[] Recipe;
+    public Recipe[] recipe;
     public virtual void Drink()
     {
 

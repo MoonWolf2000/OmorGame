@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SlimeBullet : I_P_W_Bullet
 {
@@ -9,13 +7,13 @@ public class SlimeBullet : I_P_W_Bullet
     public float timeUntilExplosion;
     public float explosionsRadius;
     public GameObject prefabSlimePuddle;
+
     private GameObject _slimespot;
-    private float _t;
     private float _tte;
     private bool _exploded;
-
-
-
+    /// <summary>
+    /// The bomp Explodes and doas dmg.
+    /// </summary>
     public void Explode()
     {
         CreateSlimespot();
@@ -23,21 +21,22 @@ public class SlimeBullet : I_P_W_Bullet
         _exploded = true;
     }
 
+    /// <summary>
+    /// instantiate a new slimespot
+    /// </summary>
     public void CreateSlimespot()
     {
         _slimespot = Instantiate(prefabSlimePuddle, transform.position, transform.rotation);
     }
 
+
     public override void WriteValues()
     {
         c2D = gameObject.GetComponent<Collider2D>();
-   
-
         _t = timeUsedToCalculateSpeed;
         _tte = timeUntilExplosion;
         base.WriteValues();
         _exploded = false;
-
 
     }
     protected override void FixedUpdateOperations()
@@ -57,11 +56,8 @@ public class SlimeBullet : I_P_W_Bullet
         {
             isFlying = false;
             Explode();
-
         }
-
     }
-
     private void DebugDrawer()
     {
         Debug.DrawRay(transform.position, Vector2.up * explosionsRadius, Color.red);
@@ -80,9 +76,9 @@ public class SlimeBullet : I_P_W_Bullet
         if (collision.gameObject.GetComponent<Enemie>())
         {
 
-        EnemyStatusChanger(collision.gameObject, EnemyStatusController.EnenemyStatus.b);
+            EnemyStatusChanger(collision.gameObject, EnemyStatusController.EnenemyStatus.b);
 
-Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 

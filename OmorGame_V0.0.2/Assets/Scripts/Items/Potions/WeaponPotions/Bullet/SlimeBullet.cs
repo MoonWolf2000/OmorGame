@@ -33,7 +33,7 @@ public class SlimeBullet : I_P_W_Bullet
     public override void WriteValues()
     {
         c2D = gameObject.GetComponent<Collider2D>();
-        _t = timeUsedToCalculateSpeed;
+        _t = attackTime;
         _tte = timeUntilExplosion;
         base.WriteValues();
         _exploded = false;

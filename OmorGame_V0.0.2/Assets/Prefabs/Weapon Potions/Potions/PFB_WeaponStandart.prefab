@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5491673637052450765}
   - component: {fileID: 5491673637052450763}
   - component: {fileID: -6243089753680303084}
-  - component: {fileID: 3999273269891832560}
   - component: {fileID: 8796697694371952361}
+  - component: {fileID: 3999273269891832560}
   m_Layer: 0
   m_Name: PFB_WeaponStandart
   m_TagString: Untagged
@@ -100,33 +100,12 @@ MonoBehaviour:
   ID: Standardboi
   displayName: 
   element: 0
-  Recipe: []
+  recipe: []
   player: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
   prefabDirectionalAttack: {fileID: 5491673637052450766}
   prefabMeelelAttack: {fileID: 4683585313375719443, guid: 1c6dea17eafdb1740aee58576f815452, type: 3}
   prefabDodgeAttack: {fileID: 5491673637052450766}
   canshoot: 1
---- !u!114 &3999273269891832560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5491673637052450766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 973205057146ce54e94fc5c0dd50e151, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayName: Shootiboy
-  chargetime: 0
-  dmg: 5
-  cooldown: 1
-  speed: 5
-  range: 2
-  timeUsedToCalculateSpeed: 1
-  direction: {x: 0, y: 0, z: 0}
-  prefabBullet: {fileID: 1817929037859783570, guid: c72bb78190879734f8b5a9d65fd145e5, type: 3}
 --- !u!114 &8796697694371952361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,11 +119,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayName: 'Wooom '
-  chargetime: 0
-  dmg: 0
+  chargetime: 0.175
+  dmg: 23.7
   cooldown: 2
   speed: 0
-  range: 5
-  timeUsedToCalculateSpeed: 0.3
+  Attackrange: 4.19
+  attackTime: 1
   startIndestructability: 0.4
   endIndestructability: 0.1
+--- !u!114 &3999273269891832560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5491673637052450766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 973205057146ce54e94fc5c0dd50e151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayName: Shootiboy
+  chargetime: 0.307
+  dmg: 20.3
+  cooldown: 3.07
+  speed: 5
+  Attackrange: 2.29
+  attackTime: 2.29
+  direction: {x: 0, y: 0}
+  prefabBullet: {fileID: 1817929037859783570, guid: c72bb78190879734f8b5a9d65fd145e5, type: 3}
+  inversed: 0

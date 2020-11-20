@@ -18,7 +18,7 @@ public class I_P_W_Bullet : I_P_Attack
     protected virtual void Start()
     {
         WriteValues();
-        _t = timeUsedToCalculateSpeed;
+        _t = attackTime;
     }
 
 

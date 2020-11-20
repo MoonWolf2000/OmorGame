@@ -26,7 +26,7 @@ public sealed class Bomb : I_P_W_Bullet
         c2D = gameObject.GetComponent<Collider2D>();
         c2D.enabled = false;
 
-        _t = timeUsedToCalculateSpeed;
+        _t = attackTime;
         t1 = timeUntilExplosion;
         base.WriteValues();
         exploded = false;

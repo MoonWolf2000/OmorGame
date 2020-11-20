@@ -31,7 +31,7 @@ public class I_P_A_Directional : I_P_Attack
         if (clone == null) return;
         clone.GetComponent<I_P_W_Bullet>().direction = direction * _inversionNumber;
         clone.GetComponent<I_P_W_Bullet>().dmg = dmg;
-        clone.GetComponent<I_P_W_Bullet>().timeUsedToCalculateSpeed = timeUsedToCalculateSpeed;
+        clone.GetComponent<I_P_W_Bullet>().attackTime = attackTime;
         clone.GetComponent<I_P_W_Bullet>().isFlying = true;
     }
 

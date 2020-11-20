@@ -1,27 +1,46 @@
 ﻿using System.Linq;
 using UnityEngine;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
+using Sirenix.Utilities.Editor;
+using UnityEditor;
 
 public abstract class I_P_Attack : MonoBehaviour
 {
     public string displayName;
-    [InspectorName("Damage")]
+    
+    [TabGroup("Attack Values")]
+    [PropertyOrder(1f),PropertyRange(0f,5f)]
     public float chargetime;
+    [TabGroup("Attack Values")]
+    [PropertyOrder(1.1f), PropertyRange(0, 50)]
     public float dmg;
+    [TabGroup("Attack Values")]
+    [PropertyOrder(1.2f), PropertyRange(0f, 5f)]
     public float cooldown;
-    [Space]
-    [Header("just for debug purpose Speed:")]
-    [SerializeField] public float speed =3;
-    [Space]
-    public float range;
-    [Header("TIME SETTINGS (time in seconds)")]
-    public float timeUsedToCalculateSpeed = 1;
 
+    [TabGroup("Speed Calculation")]
+     public float speed;
+    [TabGroup("Speed Calculation")]
+    [PropertyRange(1f,15f),OnValueChanged(nameof(CalculateSpeed))]
+    public float attackrange = 1f;
+    [TabGroup("Speed Calculation")]
+    [PropertyRange(1f, 15f)]
+    public float attackTime = 1f;
+    [TabGroup("Speed Calculation")]
+    [InfoBox(nameof(speedCalculationInfo))]
+
+
+
+    [TabGroup("Attack Values")]
+    [PropertyOrder(1.21f),ReadOnly,ShowInInspector,ProgressBar(0f,nameof(cooldown)),HideLabel]
     private float _t1;
+    private string speedCalculationInfo = "Speed is used for : test";
+
     //public float t1;
     public void Attack()
     {
-        speed = range / timeUsedToCalculateSpeed;
+        speed = attackrange / attackTime;
         if (_t1 <= 0)
         {
             _t1 = cooldown;
@@ -53,8 +72,14 @@ public abstract class I_P_Attack : MonoBehaviour
 
     protected void FixedUpdateStandartOperation()
     {
-        speed = range / timeUsedToCalculateSpeed;
+       
         _t1 = Timecheck(_t1);
+    }
+
+
+    private void CalculateSpeed()
+    {
+        speed = attackrange / attackTime;
     }
     private static float Timecheck(float localtime)
     {
@@ -98,5 +123,13 @@ public abstract class I_P_Attack : MonoBehaviour
             Debug.Log("Hier muss noch Statuschanger Code hin  " + enenemyStatus);
         }
 
+    }
+    private static float RangeClamp(float value, GUIContent label)
+    {
+        return EditorGUILayout.Slider(label, value, 0f, 10f);
+    }
+    private static float TimeClamp(float value, GUIContent label)
+    {
+        return EditorGUILayout.Slider(label, value, 0f, 1f);
     }
 }

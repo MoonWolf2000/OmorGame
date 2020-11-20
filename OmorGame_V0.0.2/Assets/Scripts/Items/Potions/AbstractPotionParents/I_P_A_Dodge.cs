@@ -3,8 +3,7 @@
 public class I_P_A_Dodge : I_P_Attack
 {
    
-    [Space]
-    [Header("Smaller number means later!")]
+   
     public float startIndestructability;
     public float endIndestructability;
     private PlayerMoveController playerMoveController;
@@ -31,7 +30,7 @@ public class I_P_A_Dodge : I_P_Attack
         playerMoveController.moving = false;
         direction = PlayerMoveController.directions[playerMoveController.futureDirection];
         playerLifeController.damageable = false;
-        d = timeUsedToCalculateSpeed;
+        d = attackTime;
         isDodging = true;
     }
 

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using Sirenix.OdinInspector;
+[HideMonoScript]
 public class LifeDebugger : MonoBehaviour
 {
 

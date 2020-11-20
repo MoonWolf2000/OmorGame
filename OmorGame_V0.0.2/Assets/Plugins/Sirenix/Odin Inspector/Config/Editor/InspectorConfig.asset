@@ -16,4 +16,8 @@ MonoBehaviour:
   defaultEditorBehaviour: 11
   processMouseMoveInInspector: 1
   drawingConfig:
-    configs: []
+    configs:
+    - DrawnTypeName: Player, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Enemie, Assembly-CSharp
+      EditorTypeName: 

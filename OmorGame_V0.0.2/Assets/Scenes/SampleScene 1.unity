@@ -201,7 +201,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4457710057766339408, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
   m_PrefabInstance: {fileID: 1778967527190433784}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2046911505}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b438a02b8b294a942a899671e429dd08, type: 3}
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1778967526269222560, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
   m_PrefabInstance: {fileID: 1778967527190433784}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2046911505}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62fa4f1f1af25744f9c8762b8b19c35c, type: 3}
@@ -560,6 +560,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54dad1c689f7cae4e93b629162fc4ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2046911505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1778967526269222569, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
+  m_PrefabInstance: {fileID: 1778967527190433784}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2046911506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046911505}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a8626d6585995458f0f34b4addbc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponPotion: {fileID: 5491673637052450766, guid: b0d41dff44001104780dd8b4e7d05e08, type: 3}
 --- !u!1001 &1778967527190433784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -571,6 +589,10 @@ PrefabInstance:
       propertyPath: test
       value: 
       objectReference: {fileID: 102900000, guid: febd6fcfa2cf981488e7c4912ebcad61, type: 3}
+    - target: {fileID: 823341396, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1778967525857891719, guid: 1b45bdc200a0ba5409f460bd8d6ceafd, type: 3}
       propertyPath: EnemyStatusController
       value: 

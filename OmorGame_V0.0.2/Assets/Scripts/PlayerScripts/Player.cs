@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Sirenix.OdinInspector;
 
+[HideMonoScript]
 public class Player : MonoBehaviour
 {
-
-    public SceneAsset test;
 
     private void Awake()
     {

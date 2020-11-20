@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
+using Sirenix.OdinInspector;
 
 public class I_P_Weapon : Potion
 {
@@ -28,7 +29,9 @@ public class I_P_Weapon : Potion
         get;
     }
 
-    private I_P_A_Directional directionalAttack;
+    [AssetList(Path = "/Prefabs/Weapon Potions/Potions")]
+    [InlineEditor(InlineEditorModes.LargePreview)]
+    public  I_P_A_Directional directionalAttack;
     private I_P_A_Melee meelelAttack;
     private I_P_A_Dodge dodgeAttack;
 
